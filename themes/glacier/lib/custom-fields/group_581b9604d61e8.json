@@ -1,0 +1,436 @@
+{
+    "key": "group_581b9604d61e8",
+    "title": "[Page] Page Custom",
+    "fields": [
+        {
+            "key": "field_581b960d667c6",
+            "label": "General",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_586b9847fe77a",
+            "label": "Parallax",
+            "name": "parallax_header",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "show": "Show",
+                "hide": "Hide"
+            },
+            "default_value": [
+                "show"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5884e481d2361",
+            "label": "Text Animation",
+            "name": "text_animation_parallax",
+            "type": "select",
+            "value": null,
+            "instructions": "preview https:\/\/daneden.github.io\/animate.css\/",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_586b9847fe77a",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "wow bounce": "Bounce",
+                "wow flash": "Flash",
+                "wow pulse": "Pulse",
+                "wow rubberBand": "RubberBand",
+                "wow shake": "Shake",
+                "wow swing": "Swing",
+                "wow tada": "Tada",
+                "wow wobble": "Wobble",
+                "wow jello": "Jello",
+                "wow bounceIn": "BounceIn",
+                "wow bounceInDown": "BounceInDown",
+                "wow bounceInLeft": "BounceInLeft",
+                "wow bounceInRight": "BounceInRight",
+                "wow bounceInUp": "BounceInUp",
+                "wow bounceOut": "BounceOut",
+                "wow bounceOutDown": "BounceOutDown",
+                "wow bounceOutLeft": "BounceOutLeft",
+                "wow bounceOutRight": "BounceOutRight",
+                "wow bounceOutUp": "BounceOutUp",
+                "wow fadeIn": "FadeIn",
+                "wow fadeInDown": "FadeInDown",
+                "wow fadeInDownBig": "FadeInDownBig",
+                "wow fadeInLeft": "FadeInLeft",
+                "wow fadeInLeftBig": "FadeInLeftBig",
+                "wow fadeInRight": "FadeInRight",
+                "wow fadeInRightBig": "FadeInRightBig",
+                "wow fadeInUp": "FadeInUp",
+                "wow fadeInUpBig": "FadeInUpBig",
+                "wow fadeOut": "FadeOut",
+                "wow fadeOutDown": "FadeOutDown",
+                "wow fadeOutDownBig": "FadeOutDownBig",
+                "wow fadeOutLeft": "FadeOutLeft",
+                "wow fadeOutLeftBig": "FadeOutLeftBig",
+                "wow fadeOutRight": "FadeOutRight",
+                "wow fadeOutRightBig": "FadeOutRightBig",
+                "wow fadeOutUp": "FadeOutUp",
+                "wow fadeOutUpBig": "FadeOutUpBig",
+                "wow flip": "Flip",
+                "wow flipInX": "FlipInX",
+                "wow flipInY": "FlipInY",
+                "wow flipOutX": "FlipOutX",
+                "wow flipOutY": "FlipOutY",
+                "wow lightSpeedIn": "LightSpeedIn",
+                "wow lightSpeedOut": "LightSpeedOut",
+                "wow rotateIn": "RotateIn",
+                "wow rotateInDownLeft": "RotateInDownLeft",
+                "wow rotateInDownRight": "RotateInDownRight",
+                "wow rotateInUpLeft": "RotateInUpLeft",
+                "wow rotateInUpRight": "RotateInUpRight",
+                "wow rotateOut": "RotateOut",
+                "wow rotateOutDownLeft": "RotateOutDownLeft",
+                "wow rotateOutDownRight": "RotateOutDownRight",
+                "wow rotateOutUpLeft": "RotateOutUpLeft",
+                "wow rotateOutUpRight": "RotateOutUpRight",
+                "wow slideInUp": "SlideInUp",
+                "wow slideInDown": "SlideInDown",
+                "wow slideInLeft": "SlideInLeft",
+                "wow slideInRight": "SlideInRight",
+                "wow slideOutUp": "SlideOutUp",
+                "wow slideOutDown": "SlideOutDown",
+                "wow slideOutLeft": "SlideOutLeft",
+                "wow slideOutRight": "SlideOutRight",
+                "wow zoomIn": "ZoomIn",
+                "wow zoomInDown": "ZoomInDown",
+                "wow zoomInLeft": "ZoomInLeft",
+                "wow zoomInRight": "ZoomInRight",
+                "wow zoomInUp": "ZoomInUp",
+                "wow zoomOut": "ZoomOut",
+                "wow zoomOutDown": "ZoomOutDown",
+                "wow zoomOutLeft": "ZoomOutLeft",
+                "wow zoomOutRight": "ZoomOutRight",
+                "wow zoomOutUp": "ZoomOutUp",
+                "wow hinge": "Hinge",
+                "wow rollIn": "RollIn",
+                "wow rollOut": "RollOut"
+            },
+            "default_value": [
+                "none"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_587162a7edc9f",
+            "label": "Title",
+            "name": "title_parallax",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_586b9847fe77a",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "MINIMAL THEME GLACIER",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ccb69a3c50a",
+            "label": "Background Video",
+            "name": "background_video_parallax",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_586b9847fe77a",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "youtube": "YouTube",
+                "vimeo": "Vimeo",
+                "html5": "HTML5"
+            },
+            "default_value": [
+                "none"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59ccb6e23c50b",
+            "label": "YouTube",
+            "name": "youtube_parallax",
+            "type": "url",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_586b9847fe77a",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_59ccb69a3c50a",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/www.youtube.com\/watch?v=ab0TSkLe-E0",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59ccb86a3c50d",
+            "label": "Vimeo",
+            "name": "vimeo_parallax",
+            "type": "url",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_586b9847fe77a",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_59ccb69a3c50a",
+                        "operator": "==",
+                        "value": "vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/vimeo.com\/110138539",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59ccb89d3c50f",
+            "label": "Self Hosted",
+            "name": "self_hosted_parallax",
+            "type": "file",
+            "value": null,
+            "instructions": "mp4, webm",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_586b9847fe77a",
+                        "operator": "==",
+                        "value": "show"
+                    },
+                    {
+                        "field": "field_59ccb69a3c50a",
+                        "operator": "==",
+                        "value": "html5"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4, webm"
+        },
+        {
+            "key": "field_586c081227b12",
+            "label": "Container",
+            "name": "container",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "full": "Full",
+                "box": "Box"
+            },
+            "default_value": [
+                "box"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        },
+        {
+            "key": "field_581b9747f8044",
+            "label": "Sidebar",
+            "name": "sidebar",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "show": "Show",
+                "hide": "Hide"
+            },
+            "default_value": [
+                "show"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        },
+        {
+            "key": "field_58acba50c1cd0",
+            "label": "Position Sidebar",
+            "name": "position_sidebar",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_581b9747f8044",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "left-sidebar": "Left",
+                "right-sidebar": "Right"
+            },
+            "default_value": [
+                "right-sidebar"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-page.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-blog.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1507373698
+}

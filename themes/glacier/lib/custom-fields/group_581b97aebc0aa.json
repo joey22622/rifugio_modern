@@ -1,0 +1,294 @@
+{
+    "key": "group_581b97aebc0aa",
+    "title": "[Page] Page Blog",
+    "fields": [
+        {
+            "key": "field_581badc120ab4",
+            "label": "General",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5902ff0db0fca",
+            "label": "Output of content",
+            "name": "output_content",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Top",
+                "bottom": "Bottom"
+            },
+            "default_value": [
+                "top"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5884e941ab1a0",
+            "label": "Variants styles",
+            "name": "blog_variants_styles",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "classic": "Classic",
+                "minimal": "Minimal",
+                "creative": "Creative"
+            },
+            "default_value": [
+                "classic"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        },
+        {
+            "key": "field_581b97ce49551",
+            "label": "Quantity displayed posts",
+            "name": "blog_max_posts",
+            "type": "number",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_581b981349552",
+                        "operator": "==",
+                        "value": "classic"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_581b981349552",
+                        "operator": "==",
+                        "value": "ajax-loader"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_58825e6917909",
+            "label": "Animation",
+            "name": "blog_animation",
+            "type": "select",
+            "value": null,
+            "instructions": "preview https:\/\/daneden.github.io\/animate.css\/",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "none": "None",
+                "wow bounce": "Bounce",
+                "wow flash": "Flash",
+                "wow pulse": "Pulse",
+                "wow rubberBand": "RubberBand",
+                "wow shake": "Shake",
+                "wow swing": "Swing",
+                "wow tada": "Tada",
+                "wow wobble": "Wobble",
+                "wow jello": "Jello",
+                "wow bounceIn": "BounceIn",
+                "wow bounceInDown": "BounceInDown",
+                "wow bounceInLeft": "BounceInLeft",
+                "wow bounceInRight": "BounceInRight",
+                "wow bounceInUp": "BounceInUp",
+                "wow bounceOut": "BounceOut",
+                "wow bounceOutDown": "BounceOutDown",
+                "wow bounceOutLeft": "BounceOutLeft",
+                "wow bounceOutRight": "BounceOutRight",
+                "wow bounceOutUp": "BounceOutUp",
+                "wow fadeIn": "FadeIn",
+                "wow fadeInDown": "FadeInDown",
+                "wow fadeInDownBig": "FadeInDownBig",
+                "wow fadeInLeft": "FadeInLeft",
+                "wow fadeInLeftBig": "FadeInLeftBig",
+                "wow fadeInRight": "FadeInRight",
+                "wow fadeInRightBig": "FadeInRightBig",
+                "wow fadeInUp": "FadeInUp",
+                "wow fadeInUpBig": "FadeInUpBig",
+                "wow fadeOut": "FadeOut",
+                "wow fadeOutDown": "FadeOutDown",
+                "wow fadeOutDownBig": "FadeOutDownBig",
+                "wow fadeOutLeft": "FadeOutLeft",
+                "wow fadeOutLeftBig": "FadeOutLeftBig",
+                "wow fadeOutRight": "FadeOutRight",
+                "wow fadeOutRightBig": "FadeOutRightBig",
+                "wow fadeOutUp": "FadeOutUp",
+                "wow fadeOutUpBig": "FadeOutUpBig",
+                "wow flip": "Flip",
+                "wow flipInX": "FlipInX",
+                "wow flipInY": "FlipInY",
+                "wow flipOutX": "FlipOutX",
+                "wow flipOutY": "FlipOutY",
+                "wow lightSpeedIn": "LightSpeedIn",
+                "wow lightSpeedOut": "LightSpeedOut",
+                "wow rotateIn": "RotateIn",
+                "wow rotateInDownLeft": "RotateInDownLeft",
+                "wow rotateInDownRight": "RotateInDownRight",
+                "wow rotateInUpLeft": "RotateInUpLeft",
+                "wow rotateInUpRight": "RotateInUpRight",
+                "wow rotateOut": "RotateOut",
+                "wow rotateOutDownLeft": "RotateOutDownLeft",
+                "wow rotateOutDownRight": "RotateOutDownRight",
+                "wow rotateOutUpLeft": "RotateOutUpLeft",
+                "wow rotateOutUpRight": "RotateOutUpRight",
+                "wow slideInUp": "SlideInUp",
+                "wow slideInDown": "SlideInDown",
+                "wow slideInLeft": "SlideInLeft",
+                "wow slideInRight": "SlideInRight",
+                "wow slideOutUp": "SlideOutUp",
+                "wow slideOutDown": "SlideOutDown",
+                "wow slideOutLeft": "SlideOutLeft",
+                "wow slideOutRight": "SlideOutRight",
+                "wow zoomIn": "ZoomIn",
+                "wow zoomInDown": "ZoomInDown",
+                "wow zoomInLeft": "ZoomInLeft",
+                "wow zoomInRight": "ZoomInRight",
+                "wow zoomInUp": "ZoomInUp",
+                "wow zoomOut": "ZoomOut",
+                "wow zoomOutDown": "ZoomOutDown",
+                "wow zoomOutLeft": "ZoomOutLeft",
+                "wow zoomOutRight": "ZoomOutRight",
+                "wow zoomOutUp": "ZoomOutUp",
+                "wow hinge": "Hinge",
+                "wow rollIn": "RollIn",
+                "wow rollOut": "RollOut"
+            },
+            "default_value": [
+                "none"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        },
+        {
+            "key": "field_587bc6462e77f",
+            "label": "Column",
+            "name": "blog_column",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "blog-column-one": "1",
+                "blog-column-two": "2",
+                "blog-column-three": "3"
+            },
+            "default_value": [
+                "blog-column-one"
+            ],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value"
+        },
+        {
+            "key": "field_581b981349552",
+            "label": "Pagination",
+            "name": "pagination",
+            "type": "select",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "classic": "Classic",
+                "ajax-loader": "Ajax",
+                "hide": "Hide"
+            },
+            "default_value": [
+                "classic"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-blog.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1507373360
+}

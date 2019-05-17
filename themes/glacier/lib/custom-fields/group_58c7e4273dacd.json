@@ -1,0 +1,135 @@
+{
+    "key": "group_58c7e4273dacd",
+    "title": "[Post Format] Audio",
+    "fields": [
+        {
+            "key": "field_58c7e42755d8b",
+            "label": "Audio Host Type",
+            "name": "audio_host_type",
+            "type": "radio",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "embed-code": "Embed Code",
+                "self-hosted": "Self Hosted"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "embed-code",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_58c7e42756173",
+            "label": "Audio Embed Code",
+            "name": "audio_embed_code",
+            "type": "oembed",
+            "value": null,
+            "instructions": "Paste the link audio here. If you want to use self hosted, you may leave it blank and choose self hosted option above.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58c7e42755d8b",
+                        "operator": "==",
+                        "value": "embed-code"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_58c7e4275655b",
+            "label": "Self Hosted",
+            "name": "audio_self_hosted",
+            "type": "file",
+            "value": null,
+            "instructions": "Upload or select your self hosted Audio. If you want to use embed code. you may leave it blank and choose embed code option above.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58c7e42755d8b",
+                        "operator": "==",
+                        "value": "self-hosted"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp3, ogg, wma, m4a, wav"
+        },
+        {
+            "key": "field_58c92cafbabc9",
+            "label": "Title",
+            "name": "audio_self_hosted_title",
+            "type": "text",
+            "value": null,
+            "instructions": "Title audio",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58c7e42755d8b",
+                        "operator": "==",
+                        "value": "self-hosted"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "audio"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1509896273
+}

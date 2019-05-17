@@ -1,0 +1,86 @@
+{
+    "key": "group_58c7cfaf85e5a",
+    "title": "[Post Format] Quote",
+    "fields": [
+        {
+            "key": "field_58c7cfc84e1f9",
+            "label": "Quote Content",
+            "name": "quote_content",
+            "type": "textarea",
+            "value": null,
+            "instructions": "Please type the text of your quote here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_58c7cfdd4e1fa",
+            "label": "Quote Source Name",
+            "name": "quote_source_name",
+            "type": "text",
+            "value": null,
+            "instructions": "Type the author name \/ name of the quote source.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_58c7cffc4e1fb",
+            "label": "Quote Source Link (URL)",
+            "name": "quote_source_link_url",
+            "type": "url",
+            "value": null,
+            "instructions": "Paste the link of the quote source. The author name will be linked to this link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "quote"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1509896345
+}

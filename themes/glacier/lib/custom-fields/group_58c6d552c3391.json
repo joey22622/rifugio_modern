@@ -1,0 +1,80 @@
+{
+    "key": "group_58c6d552c3391",
+    "title": "[Post Format] Gallery",
+    "fields": [
+        {
+            "key": "field_58c6e52eea17d",
+            "label": "Gallery Type",
+            "name": "gallery_type",
+            "type": "radio",
+            "value": null,
+            "instructions": "Choose the Gallery type you wnt to display",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "slider": "Slider Gallery",
+                "tiled": "Tiled Gallery"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_58c6f0b5ea17e",
+            "label": "Upload or Choose Images",
+            "name": "type_gallery_images",
+            "type": "gallery",
+            "value": null,
+            "instructions": "Choose or upload images for this gallery",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "gallery"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1509896299
+}

@@ -1,0 +1,71 @@
+{
+    "key": "group_58c7d17ada313",
+    "title": "[Post Format] Status",
+    "fields": [
+        {
+            "key": "field_58c7d1894a1cc",
+            "label": "Status Type",
+            "name": "status_type",
+            "type": "radio",
+            "value": null,
+            "instructions": "Choose the status type you wnt to post",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "twitter": "Twitter Status",
+                "facebook": "Facebook Status"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_58c7d1c04a1cd",
+            "label": "Status link (URL)",
+            "name": "status_link_url",
+            "type": "url",
+            "value": null,
+            "instructions": "Paste the Link of the status",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_format",
+                "operator": "==",
+                "value": "status"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1509896362
+}
