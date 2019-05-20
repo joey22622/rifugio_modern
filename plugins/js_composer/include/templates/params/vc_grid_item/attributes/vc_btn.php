@@ -4,8 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * @var $vc_btn WPBakeryShortCode_VC_Btn
- * @var $post WP_Post
+ * @var WPBakeryShortCode_Vc_Btn $vc_btn
+ * @var WP_Post $post
  * @var $atts
  *
  * @var $style
@@ -43,8 +43,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atts = array();
 parse_str( $data, $atts );
 
-VcShortcodeAutoloader::getInstance()->includeClass( 'WPBakeryShortCode_VC_Btn' );
-$vc_btn = new WPBakeryShortCode_VC_Btn( array( 'base' => 'vc_btn' ) );
+VcShortcodeAutoloader::getInstance()->includeClass( 'WPBakeryShortCode_Vc_Btn' );
+$vc_btn = new WPBakeryShortCode_Vc_Btn( array( 'base' => 'vc_btn' ) );
 
 $style = $shape = $color = $size = $custom_background = $custom_text = $align = $link = $title = $button_block = $el_class = $outline_custom_color = $outline_custom_hover_background = $outline_custom_hover_text = $add_icon = $i_align = $i_type = $i_icon_entypo = $i_icon_fontawesome = $i_icon_linecons = $i_icon_pixelicons = $i_icon_typicons = $css = $css_animation = '';
 $gradient_color_1 = $gradient_color_2 = $gradient_custom_color_1 = $gradient_custom_color_2 = $gradient_text_color = '';
@@ -55,10 +55,10 @@ $icon_wrapper = false;
 $icon_html = false;
 $attributes = array();
 
-/** @var $vc_btn WPBakeryShortCode_VC_Btn */
+/** @var WPBakeryShortCode_Vc_Btn $vc_btn */
 $atts = vc_map_get_attributes( $vc_btn->getShortcode(), $atts );
 extract( $atts );
-//parse link
+// parse link
 $link = trim( $link );
 $use_link = strlen( $link ) > 0 && 'none' !== $link;
 
@@ -186,8 +186,8 @@ if ( 'custom' === $style ) {
 	$gradient_css_hover[] = 'background-position: 100% 0';
 
 	$uid = uniqid();
-	echo '<style type="text/css">.vc_btn3-style-' . $style . '.vc_btn-gradient-btn-' . $uid . ':hover{' . implode( ';', $gradient_css_hover ) . ';' . '}</style>';
-	echo '<style type="text/css">.vc_btn3-style-' . $style . '.vc_btn-gradient-btn-' . $uid . '{' . implode( ';', $gradient_css ) . ';' . '}</style>';
+	echo '<style type="text/css">.vc_btn3-style-' . esc_attr( $style ) . '.vc_btn-gradient-btn-' . esc_attr( $uid ) . ':hover{' . esc_attr( implode( ';', $gradient_css_hover ) ) . ';' . '}</style>';
+	echo '<style type="text/css">.vc_btn3-style-' . esc_attr( $style ) . '.vc_btn-gradient-btn-' . esc_attr( $uid ) . '{' . esc_attr( implode( ';', $gradient_css ) ) . ';' . '}</style>';
 	$button_classes[] = 'vc_btn-gradient-btn-' . $uid;
 	$attributes[] = 'data-vc-gradient-1="' . $gradient_color_1 . '"';
 	$attributes[] = 'data-vc-gradient-2="' . $gradient_color_2 . '"';
@@ -218,26 +218,24 @@ if ( ! empty( $custom_onclick ) && $custom_onclick_code ) {
 }
 
 $attributes = implode( ' ', $attributes );
-$wrapper_attributes = array();
-if ( ! empty( $el_id ) ) {
-	$wrapper_attributes[] = 'id="' . esc_attr( $el_id ) . '"';
-}
 ob_start();
 ?>
-	<div class="<?php echo trim( esc_attr( $css_class ) ) ?>" <?php echo implode( ' ', $wrapper_attributes ); ?>>
+	<div class="<?php echo esc_attr( trim( $css_class ) ); ?>"<?php echo ! empty( $el_id ) ? ' id="' . esc_attr( $el_id ) . '"' : false; ?>>
 		<?php
 		if ( $use_link ) {
 			if ( preg_match( '/href=\"[^\"]+/', $link_output ) ) {
+				// @codingStandardsIgnoreLine
 				echo '<a ' . $attributes . '>' . $button_html . '</a>';
 			} elseif ( 'load-more-grid' === $link ) {
+				// @codingStandardsIgnoreLine
 				echo '<a href="javascript:;" ' . $attributes . '>' . $button_html . '</a>';
 			}
 		} else {
+			// @codingStandardsIgnoreLine
 			echo '<button ' . $attributes . '>' . $button_html . '</button>';
 		}
-		?></div>
-
-
+		?>
+		</div>
 <?php
 
 return ob_get_clean();
