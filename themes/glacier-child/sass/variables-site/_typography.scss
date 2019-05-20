@@ -1,0 +1,51 @@
+@font-face {
+	font-family: "Corbel";
+	src: 
+		url("./fonts/Corbel/Corbel.eot") format("embedded-opentype"),
+		url("./fonts/Corbel/Corbel.ttf") format("truetype"),
+		url("./fonts/Corbel/Corbel.woff") format("woff"),
+		url("./fonts/Corbel/Corbel.svg") format("svg");
+	font-weight: 100;
+	font-style: normal; 
+}
+@font-face {
+	font-family: "Corbel";
+	src: 
+		url("./fonts/Corbel-Italic/Corbel-Italic.eot") format("embedded-opentype"),
+		url("./fonts/Corbel-Italic/Corbel-Italic.ttf") format("truetype"),
+		url("./fonts/Corbel-Italic/Corbel-Italic.woff") format("woff"),
+		url("./fonts/Corbel-Italic/Corbel-Italic.svg") format("svg");
+	font-weight: 100;
+	font-style: italic; 
+}
+@font-face {
+	font-family: "Corbel";
+	src: 
+		url("./fonts/Corbel-Bold/Corbel-Bold.eot") format("embedded-opentype"),
+		url("./fonts/Corbel-Bold/Corbel-Bold.ttf") format("truetype"),
+		url("./fonts/Corbel-Bold/Corbel-Bold.woff") format("woff"),
+		url("./fonts/Corbel-Bold/Corbel-Bold.svg") format("svg");
+	font-weight: 400;
+	font-style: normal; 
+}
+@font-face {
+	font-family: "Corbel";
+	src: 
+		url("./fonts/Corbel-BoldItalic/Corbel-BoldItalic.eot") format("embedded-opentype"),
+		url("./fonts/Corbel-BoldItalic/Corbel-BoldItalic.ttf") format("truetype"),
+		url("./fonts/Corbel-BoldItalic/Corbel-BoldItalic.woff") format("woff"),
+		url("./fonts/Corbel-BoldItalic/Corbel-BoldItalic.svg") format("svg");
+	font-weight: 400;
+	font-style: italic; 
+}
+
+$font__main: "Corbel", "Gill Sans", sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+
+h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: $font__main !important;
+}
