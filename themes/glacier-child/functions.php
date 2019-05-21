@@ -25,4 +25,11 @@ function glacier_child_enqueue_styles() {
     );
 }
 
+
 add_action(  'wp_enqueue_scripts', 'glacier_child_enqueue_styles' );
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}

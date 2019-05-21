@@ -1002,4 +1002,34 @@ object {
 	display: block;
 }
 
+footer {
+	margin-top: 5rem;
+}
+
+.footer-inner {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+}
+
+.phone-email-wrap a {
+	margin: 0 1rem;
+}
+
+.social-wrap {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.social-wrap .social-icon-wrap {
+	margin: 0 1rem;
+	height: 2rem;
+	width: 2rem;
+}
+
+.social-wrap .social-icon-wrap svg {
+	height: 100%;
+}
+
 /*# sourceMappingURL=../glacier-child/sass/maps/style.css.map */
