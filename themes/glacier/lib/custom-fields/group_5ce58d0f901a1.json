@@ -587,14 +587,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "portfolio"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
+                "value": "brand"
             }
         ]
     ],
@@ -606,5 +599,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558547850
+    "modified": 1558562128
 }
