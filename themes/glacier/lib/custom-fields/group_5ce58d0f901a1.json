@@ -1,9 +1,9 @@
 {
-    "key": "group_581b98b1a9361",
-    "title": "[Post] Portfolio Item",
+    "key": "group_5ce58d0f901a1",
+    "title": "[Post] Brand Page",
     "fields": [
         {
-            "key": "field_588929aad5a1f",
+            "key": "field_5ce58d0f9a53c",
             "label": "Gallery projects",
             "name": "gallery_projects",
             "type": "gallery",
@@ -28,7 +28,7 @@
             "insert": "append"
         },
         {
-            "key": "field_59d62ee5ba388",
+            "key": "field_5ce58d0f9a564",
             "label": "Parallax",
             "name": "parallax_header",
             "type": "select",
@@ -55,7 +55,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_59d62f20ba389",
+            "key": "field_5ce58d0f9a576",
             "label": "Text Animation",
             "name": "text_animation_parallax",
             "type": "select",
@@ -64,7 +64,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_59d62ee5ba388",
+                        "field": "field_5ce58d0f9a564",
                         "operator": "==",
                         "value": "show"
                     }
@@ -164,7 +164,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_59d62f64ba38a",
+            "key": "field_5ce58d0f9a583",
             "label": "Title",
             "name": "title_parallax",
             "type": "text",
@@ -184,7 +184,7 @@
             "append": ""
         },
         {
-            "key": "field_59d6327c91a84",
+            "key": "field_5ce58d0f9a5b6",
             "label": "Image",
             "name": "parallax_image",
             "type": "image",
@@ -193,7 +193,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_59d62ee5ba388",
+                        "field": "field_5ce58d0f9a564",
                         "operator": "==",
                         "value": "show"
                     }
@@ -216,7 +216,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_59d62fffba38b",
+            "key": "field_5ce58d0f9a5ce",
             "label": "Background Video",
             "name": "background_video_parallax",
             "type": "select",
@@ -225,7 +225,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_59d62ee5ba388",
+                        "field": "field_5ce58d0f9a564",
                         "operator": "==",
                         "value": "show"
                     }
@@ -253,7 +253,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_59d63036ba38c",
+            "key": "field_5ce58d0f9a5de",
             "label": "YouTube",
             "name": "youtube_parallax",
             "type": "url",
@@ -262,12 +262,12 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_59d62ee5ba388",
+                        "field": "field_5ce58d0f9a564",
                         "operator": "==",
                         "value": "show"
                     },
                     {
-                        "field": "field_59d62fffba38b",
+                        "field": "field_5ce58d0f9a5ce",
                         "operator": "==",
                         "value": "youtube"
                     }
@@ -282,7 +282,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_59d63060ba38e",
+            "key": "field_5ce58d0f9a5ec",
             "label": "Vimeo",
             "name": "vimeo_parallax",
             "type": "url",
@@ -291,12 +291,12 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_59d62ee5ba388",
+                        "field": "field_5ce58d0f9a564",
                         "operator": "==",
                         "value": "show"
                     },
                     {
-                        "field": "field_59d62fffba38b",
+                        "field": "field_5ce58d0f9a5ce",
                         "operator": "==",
                         "value": "vimeo"
                     }
@@ -311,7 +311,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_59d630d3ba390",
+            "key": "field_5ce58d0f9a5fa",
             "label": "Self Hosted",
             "name": "self_hosted_parallax",
             "type": "file",
@@ -320,12 +320,12 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_59d62ee5ba388",
+                        "field": "field_5ce58d0f9a564",
                         "operator": "==",
                         "value": "show"
                     },
                     {
-                        "field": "field_59d62fffba38b",
+                        "field": "field_5ce58d0f9a5ce",
                         "operator": "==",
                         "value": "html5"
                     }
@@ -343,7 +343,7 @@
             "mime_types": "mp4"
         },
         {
-            "key": "field_5889e8561fd5a",
+            "key": "field_5ce58d0f9a607",
             "label": "Project Description",
             "name": "",
             "type": "tab",
@@ -359,7 +359,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5889ea017abcf",
+            "key": "field_5ce58d0f9a614",
             "label": "Visible",
             "name": "visible_details",
             "type": "select",
@@ -384,7 +384,7 @@
             "return_format": "value"
         },
         {
-            "key": "field_5889ea777abd0",
+            "key": "field_5ce58d0f9a622",
             "label": "Project details",
             "name": "project_details",
             "type": "text",
@@ -403,7 +403,7 @@
             "append": ""
         },
         {
-            "key": "field_5889f95f2c74a",
+            "key": "field_5ce58d0f9a630",
             "label": "Title #1",
             "name": "author_title",
             "type": "text",
@@ -422,7 +422,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5889f9f02c74b",
+            "key": "field_5ce58d0f9a63c",
             "label": "Author",
             "name": "author",
             "type": "text",
@@ -441,7 +441,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5889ea947abd1",
+            "key": "field_5ce58d0f9a64b",
             "label": "Title #2",
             "name": "client_name_title",
             "type": "text",
@@ -460,7 +460,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5889f72dd0b3f",
+            "key": "field_5ce58d0f9a657",
             "label": "Client name",
             "name": "client_name",
             "type": "text",
@@ -479,7 +479,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5889eaad7abd2",
+            "key": "field_5ce58d0f9a665",
             "label": "Title #3",
             "name": "project_date_title",
             "type": "text",
@@ -498,7 +498,7 @@
             "append": ""
         },
         {
-            "key": "field_5889f77cd0b40",
+            "key": "field_5ce58d0f9a674",
             "label": "Project date",
             "name": "project_date",
             "type": "text",
@@ -517,7 +517,7 @@
             "append": ""
         },
         {
-            "key": "field_5889eac27abd3",
+            "key": "field_5ce58d0f9a680",
             "label": "Title #4",
             "name": "project_location_title",
             "type": "text",
@@ -536,7 +536,7 @@
             "append": ""
         },
         {
-            "key": "field_5889f795d0b41",
+            "key": "field_5ce58d0f9a68c",
             "label": "Project location",
             "name": "project_location",
             "type": "text",
@@ -555,7 +555,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_59d5e91aed353",
+            "key": "field_5ce58d0f9a698",
             "label": "Social icons",
             "name": "social_icons_portfolio",
             "type": "select",
@@ -594,7 +594,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "brands"
+                "value": "post"
             }
         ]
     ],
@@ -606,5 +606,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558546295
+    "modified": 1558547850
 }
