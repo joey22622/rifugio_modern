@@ -16,7 +16,7 @@
 
 			<?php
 
-				the_title( '<h3 class="entry-header">', '</h3>' );
+				the_title( '<h1 class="entry-header">', '</h1>' );
 
 				// Start the Loop.
 				while ( have_posts() ) : the_post();

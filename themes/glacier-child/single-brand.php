@@ -17,7 +17,7 @@
 	$logo = get_field('brand_logo');
 	$website = get_field('brand_link');
 	$visible = get_field('visible_details');
-	$variants = get_field('single_variants_style');
+	$variants = "three";
 	// $column_single = get_field('column_single');
 	// $social_icons_portfolio = get_field('social_icons_portfolio');
 
@@ -66,6 +66,21 @@
 			<div class="col-md-12">
 				<div  class="row post-title-row">
 					<h1><?php echo get_the_title(); ?></h1>
+<?php 
+					if($logo):
+?>
+						<div class="logo-wrap">
+
+<?php
+						echo $logo;
+?>
+						</div>
+						<!-- /.logo-wrap -->
+<?php
+					endif;
+?>
+					</div>
+					<!-- /.logo-wrap -->
 				</div>
 					<?php if ( $column_single == 'col-md-6' || $column_single == 'col-md-4' || $column_single == 'col-md-3') : ?> 
 
@@ -120,37 +135,9 @@
 
 
 				<div class="project-details">
+					<a href="<?php echo $website ?>" class="brand-website" target="_blank">visit website</a> <!-- /.brand-website -->
+<?php
 
-
-<?php
-// check if the repeater field has rows of data
-						if( have_rows('project_brands') ):	
-?>
-				<p class="project-brands">
-<?php
-							$rowCount = count( get_field('project_brands')); //GET THE COUNT
-							$i = 1;
-							$commaSpace = ", ";
-							 while ( have_rows('project_brands') ) : the_row();
-								 $post_object = get_sub_field('brand');
-									 if($i >= $rowCount):
-										$commaSpace = "";
-									 endif;
-									if($post_object):
-										$post = $post_object;
-										setup_postdata( $post );
-?>
-<a href="<?php the_permalink()?>"><?php echo  get_the_title(); echo $commaSpace; ?></a>
-<?php						
-								wp_reset_postdata();
-								endif;
-								$i++;
-							endwhile;
-?>
-				</p>
-				<!-- /.project-brands -->
-<?php
-						endif;
 
 
 							if ( $social_icons_portfolio == 'show' ) : ?> 
