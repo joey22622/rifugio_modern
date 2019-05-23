@@ -36,6 +36,7 @@ window.location.replace(document.querySelector(".parent-brand-link").value);
 <?php
 										wp_reset_postdata();
 										endif;
+					wp_redirect( home_url() ); exit;
 
 					echo glacier_post_navigation();
 									

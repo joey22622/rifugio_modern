@@ -1,9 +1,9 @@
 {
-    "key": "group_581b98b1a9361",
-    "title": "[Post] Portfolio Item",
+    "key": "group_5ce70c4e56d57",
+    "title": "[Post] Brand Page",
     "fields": [
         {
-            "key": "field_5ce6d26e27a52",
+            "key": "field_5ce70c4e60d1c",
             "label": "Gallery or Single Photo",
             "name": "single_variants_style",
             "type": "radio",
@@ -27,7 +27,7 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_588929aad5a1f",
+            "key": "field_5ce70c4e60d2e",
             "label": "Gallery projects",
             "name": "gallery_projects",
             "type": "gallery",
@@ -52,7 +52,7 @@
             "insert": "append"
         },
         {
-            "key": "field_5889e8561fd5a",
+            "key": "field_5ce70c4e60d3c",
             "label": "Project Description",
             "name": "",
             "type": "tab",
@@ -68,7 +68,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59d62f64ba38a",
+            "key": "field_5ce70c4e60d5a",
             "label": "Title",
             "name": "title_parallax",
             "type": "text",
@@ -88,10 +88,10 @@
             "append": ""
         },
         {
-            "key": "field_5ce702b4524b4",
-            "label": "Brands",
-            "name": "project_brands",
-            "type": "repeater",
+            "key": "field_5ce70c6e45a03",
+            "label": "Brand Website LInk",
+            "name": "brand_link",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -100,42 +100,15 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5ce70316524b5",
-                    "label": "Brand",
-                    "name": "brand",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "brand"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
-                }
-            ]
+            "default_value": "",
+            "placeholder": ""
         },
         {
-            "key": "field_5889f795d0b41",
-            "label": "Project location",
-            "name": "project_location",
-            "type": "text",
-            "instructions": "",
+            "key": "field_5ce70ccc771c8",
+            "label": "Brand Logo",
+            "name": "brand_logo",
+            "type": "textarea",
+            "instructions": "Only accepts SVG images",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -143,11 +116,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "California, USA",
+            "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -155,14 +128,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "portfolio"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
+                "value": "brand"
             }
         ]
     ],
@@ -174,5 +140,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558643740
+    "modified": 1558650133
 }
