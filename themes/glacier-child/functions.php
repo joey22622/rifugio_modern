@@ -56,7 +56,7 @@ function custom_post_type() {
 			'hierarchical'       => false,
 			'menu_position'      => 4,
 			'menu_icon'          => 'dashicons-store',
-			'supports'           => array( 'title', 'author'),
+			'supports'           => array( 'title', 'author', 'editor', 'post-formats'),
 			'taxonomies'         => array( 'category', 'post_tag' )
 	);
 		
@@ -92,7 +92,7 @@ function custom_post_type() {
 			'hierarchical'       => true,
 			'menu_position'      => 5,
 			'menu_icon'          => 'dashicons-images-alt',
-			'supports'           => array( 'title', 'author', 'thumbnail'),
+			'supports'           => array( 'title', 'author', 'thumbnail', 'post-formats'),
 			'taxonomies'         => array( 'category', 'post_tag' )
 	);
 		

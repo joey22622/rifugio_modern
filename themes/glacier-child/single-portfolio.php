@@ -15,7 +15,7 @@
 	// vars ( ACF )
 	$images = get_field('gallery_projects');
 	$visible = get_field('visible_details');
-	$variants = get_field('single_variants_styles');
+	$variants = get_field('single_variants_style');
 	$column_single = get_field('column_single');
 	$social_icons_portfolio = get_field('social_icons_portfolio');
 
@@ -57,13 +57,13 @@
     <div class="container">
 
       <div class="row">
-
+					<h1><?php echo $variants ?></h1>
 
       		<?php if ( $variants == 'three' ) : ?> 
 
       		<!-- VARIANT PROJECT 3 -->
 			<div class="col-md-12">
-
+				
 					<?php if ( $column_single == 'col-md-6' || $column_single == 'col-md-4' || $column_single == 'col-md-3') : ?> 
 
 						<div class="row">
@@ -100,6 +100,7 @@
 
       		<!-- VARIANT PROJECT 1 -->
 			<div class="col-md-7">
+
 
 			<?php if ( $images ) : ?> 
 			        <?php foreach ( $images as $image ) : ?>
@@ -208,6 +209,7 @@
 
       		<!-- VARIANT PROJECT 4 -->
 			<div class="col-md-12">
+
 
 				<?php if ( $column_single == 'col-md-6' || $column_single == 'col-md-4' || $column_single == 'col-md-3') : ?> 
 
