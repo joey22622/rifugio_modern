@@ -1002,6 +1002,69 @@ object {
 	display: block;
 }
 
+.header-wrap {
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+}
+
+.main-navigation {
+	width: auto;
+	transition: .2s;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: end;
+	    justify-content: flex-end;
+	height: 50px;
+}
+
+.main-navigation .hamburger-wrap {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+	transition: .2s;
+}
+
+.main-navigation .menu-wrap {
+	transition: .2s;
+	transform: translateX(100px);
+	opacity: 0;
+}
+
+.main-navigation .menu-wrap .menu-main-navigation-container ul li {
+	margin: 1rem 3rem;
+}
+
+.main-navigation:hover .menu-wrap {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.main-navigation:hover .hamburger-wrap {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.hamburger {
+	background: none;
+	border: none;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+.burger-line {
+	height: 1px;
+	width: 35px;
+	background: black;
+	margin: 8px;
+}
+
 footer {
 	margin-top: 5rem;
 }

@@ -100,6 +100,66 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 --------------------------------------------------------------*/
 @import "media/media";
 
+//HEADER STYLES
+.header-wrap{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.main-navigation{
+	width: auto;
+	transition: .2s;
+	display: flex;
+	justify-content: flex-end;
+	height: 50px;
+
+
+	.hamburger-wrap{
+		// background: green;
+		position: absolute;
+		right: 0;
+		z-index: 1;
+		transition: .2s;
+	}
+	.menu-wrap{
+		transition: .2s;
+		transform: translateX(100px);
+		opacity: 0;
+		.menu-main-navigation-container{
+			ul li{
+				margin: 1rem 3rem;
+			}
+		}
+	}
+	&:hover{
+		
+		.menu-wrap{
+			transform: translateX(0);
+			opacity: 1;
+		}
+		.hamburger-wrap{
+			opacity: 0;
+			pointer-events: none;
+
+		}
+
+	}	
+}
+
+.hamburger{
+	background: none;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+.burger-line{
+	height: 1px;
+	width: 35px;
+	background: black;
+	margin: 8px;
+}
 
 //FOOTER STYLES
 footer{

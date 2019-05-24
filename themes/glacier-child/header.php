@@ -42,9 +42,9 @@
 
 
 <header <?php if ( true == get_theme_mod( 'header_sticky', false ) ) : ?> class="sticky" <?php endif; ?> >
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="header-wrap">
 
 
        <?php if ( true == get_theme_mod( 'logo_header' ) ) : ?>
@@ -95,21 +95,29 @@
 
 
             <!-- NAVIGATION -->
-            <nav>
-
+            <nav class="main-navigation">
+            <div class="hamburger-wrap">
+              <button class="hamburger">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+              </button> <!-- /.hamburger -->
+            </div>
+              <div class="menu-wrap">
             <?php
 
                 wp_nav_menu(
-                array (
+                  array (
                     'theme_location' => 'primary-menu',
                     'class' => '',
                     'container_id' => 'glacier_menu',
                     'walker' => new Glacier_Menu_Walker()
-                )
-            );
+                    )
+                  );
+  
+  ?>
 
-            ?>
-
+              </div>
+              <!-- /.menu-wrap -->
             </nav>
             <!-- END NAVIGATION -->
 
