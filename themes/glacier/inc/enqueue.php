@@ -26,7 +26,7 @@ function glacier_fonts_url() {
 function glacier_load_styles() {
 
     // Bootstrap 3
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/plugins/bootstrap.min.css' );
+    // wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/plugins/bootstrap.min.css' );
 
     // Animate
     wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/css/plugins/animate.min.css' );

@@ -25,6 +25,12 @@ function glacier_child_enqueue_styles() {
         wp_get_theme()->get('Version')
     );
 }
+
+function glacier_child_enqueue_scripts() {
+	wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/assets/js/custom-scripts.js', array('jquery'), '1.0', true );
+}
+
+
 function custom_post_type() {
 	
 	$labels = array(
@@ -112,7 +118,9 @@ register_activation_hook( __FILE__, 'my_rewrite_flush' );
 
 
 
-add_action(  'wp_enqueue_scripts', 'glacier_child_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'glacier_child_enqueue_styles');
+add_action( 'wp_enqueue_scripts', 'glacier_child_enqueue_scripts' );
+
 
 if( function_exists('acf_add_options_page') ) {
 	
