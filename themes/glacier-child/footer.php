@@ -7,7 +7,7 @@
 
   <?php if ( 'minimal' == get_theme_mod( 'variants_footer', true ) ) : ?>
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 footer-inner">
         <div class="phone-email-wrap">

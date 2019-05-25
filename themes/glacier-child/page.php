@@ -10,9 +10,9 @@
 <?php get_header(); ?>
 
 <div class="container">
-  <div class="row">
+  <div class="row d-flex justify-content-center">
   
-	<div class="col-md-9">
+	<div class="content-wrap">
 
 			<?php
 

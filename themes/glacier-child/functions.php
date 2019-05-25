@@ -17,6 +17,7 @@
  * @link https://codex.wordpress.org/Child_Themes
  */
 function glacier_child_enqueue_styles() {
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/plugins/bootstrap.min.css' );
     wp_enqueue_style( 'glacier-style' , get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'glacier-child-style',
         get_stylesheet_directory_uri() . '/style.css',

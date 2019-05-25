@@ -62,8 +62,13 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 	font-style: italic;
 }
 
+p, span, a {
+	font-family: "Corbel", "Gill Sans", sans-serif;
+	font-size: 1.6rem;
+}
+
 h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-	font-family: "Corbel", "Gill Sans", sans-serif !important;
+	font-family: "Corbel", "Gill Sans", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -629,15 +634,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: white;
 }
 
 a:visited {
-	color: purple;
+	color: white;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #f8981d;
 }
 
 a:focus {
@@ -1008,6 +1013,7 @@ object {
 	display: flex;
 	-ms-flex-pack: justify;
 	    justify-content: space-between;
+	position: fixed;
 }
 
 .main-navigation {
@@ -1017,7 +1023,9 @@ object {
 	display: flex;
 	-ms-flex-pack: end;
 	    justify-content: flex-end;
-	height: 50px;
+	min-height: 50px;
+	padding-left: 200px;
+	padding: 0 1rem;
 }
 
 .main-navigation .hamburger-wrap {
@@ -1034,12 +1042,26 @@ object {
 }
 
 .main-navigation .menu-wrap .menu-main-navigation-container ul li {
-	margin: 1rem 3rem;
+	margin: 1rem 0rem;
+	opacity: .8;
+	transition: .4s;
+}
+
+.main-navigation .menu-wrap .menu-main-navigation-container ul li ul {
+	text-transform: none;
+}
+
+.main-navigation:hover {
+	min-height: 200px;
 }
 
 .main-navigation:hover .menu-wrap {
 	transform: translateX(0);
 	opacity: 1;
+}
+
+.main-navigation:hover .menu-wrap ul li {
+	margin: 1rem 3rem;
 }
 
 .main-navigation:hover .hamburger-wrap {
@@ -1060,9 +1082,13 @@ object {
 
 .burger-line {
 	height: 1px;
-	width: 35px;
-	background: black;
-	margin: 8px;
+	width: 28px;
+	background: white;
+	margin: 6px;
+}
+
+nav {
+	text-transform: uppercase;
 }
 
 footer {
@@ -1093,6 +1119,48 @@ footer {
 
 .social-wrap .social-icon-wrap svg {
 	height: 100%;
+}
+
+.social-wrap .social-icon-wrap svg path {
+	fill: white;
+	transition: .2s;
+}
+
+.social-wrap .social-icon-wrap:hover path {
+	fill: #f8981d;
+}
+
+h1.entry-header {
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 100px;
+}
+
+.content-wrap {
+	margin: auto;
+	max-width: 850px;
+	padding: 25px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.vp-id-1998 .vp-portfolio__items-style-fly .vp-portfolio__item-overlay {
+	background: rgba(10, 15, 18, 0.8) !important;
+}
+
+.vp-portfolio__items-style-fly .vp-portfolio__item-meta-title {
+	color: #f8981d !important;
+	text-transform: uppercase;
+	padding: .3rem 1rem;
+	text-shadow: 1px 1px 2px black;
+}
+
+html,
+body {
+	background-color: #1e2326 !important;
+	font-variant-numeric: lining-nums !important;
 }
 
 /*# sourceMappingURL=../glacier-child/sass/maps/style.css.map */

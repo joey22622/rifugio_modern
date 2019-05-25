@@ -45,7 +45,10 @@ $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
-
+p, span, a {
+	font-family: $font__main;
+	font-size: 1.6rem;
+}
 h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: $font__main !important;
+    font-family: $font__main;
 }
