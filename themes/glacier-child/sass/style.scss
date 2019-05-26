@@ -139,7 +139,7 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 			}
 		}
 	}
-	&:hover{
+	&.active{
 		min-height: 200px;
 		.menu-wrap{
 			transform: translateX(0);

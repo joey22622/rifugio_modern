@@ -1051,20 +1051,20 @@ object {
 	text-transform: none;
 }
 
-.main-navigation:hover {
+.main-navigation.active {
 	min-height: 200px;
 }
 
-.main-navigation:hover .menu-wrap {
+.main-navigation.active .menu-wrap {
 	transform: translateX(0);
 	opacity: 1;
 }
 
-.main-navigation:hover .menu-wrap ul li {
+.main-navigation.active .menu-wrap ul li {
 	margin: 1rem 3rem;
 }
 
-.main-navigation:hover .hamburger-wrap {
+.main-navigation.active .hamburger-wrap {
 	opacity: 0;
 	pointer-events: none;
 }
