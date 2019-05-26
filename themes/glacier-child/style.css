@@ -71,6 +71,13 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	font-family: "Corbel", "Gill Sans", sans-serif;
 }
 
+h1 {
+	color: #ddd;
+	font-size: 3.8rem;
+	letter-spacing: .2em;
+	border-bottom: solid rgba(255, 255, 255, 0.2) 1px;
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -102,7 +109,6 @@ body {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-size: 2em;
 	margin: 0.67em 0;
 }
 
@@ -415,7 +421,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #ddd;
 	font-family: "Corbel", "Gill Sans", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
@@ -1045,6 +1051,7 @@ object {
 	margin: 1rem 0rem;
 	opacity: .8;
 	transition: .4s;
+	text-shadow: 1px 1px 2px black;
 }
 
 .main-navigation .menu-wrap .menu-main-navigation-container ul li ul {
@@ -1061,7 +1068,7 @@ object {
 }
 
 .main-navigation.active .menu-wrap ul li {
-	margin: 1rem 3rem;
+	margin: 1rem 4rem;
 }
 
 .main-navigation.active .hamburger-wrap {
@@ -1088,7 +1095,7 @@ object {
 }
 
 nav {
-	text-transform: uppercase;
+	text-transform: lowercase;
 }
 
 footer {
@@ -1132,6 +1139,8 @@ footer {
 
 h1.entry-header {
 	text-align: center;
+	letter-spacing: .2em;
+	padding-bottom: 3rem;
 	text-transform: uppercase;
 	margin-top: 100px;
 }
@@ -1151,7 +1160,7 @@ a:hover {
 }
 
 .vp-portfolio__items-style-fly .vp-portfolio__item-meta-title {
-	color: #f8981d !important;
+	color: white !important;
 	text-transform: uppercase;
 	padding: .3rem 1rem;
 	text-shadow: 1px 1px 2px black;

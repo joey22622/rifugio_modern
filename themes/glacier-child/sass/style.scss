@@ -132,6 +132,7 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 				margin: 1rem 0rem;
 				opacity: .8;
 				transition: .4s;
+				text-shadow: $color__text-shadow;
 
 				ul{
 					text-transform: none;
@@ -146,7 +147,7 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 			opacity: 1;
 
 			ul li{
-				margin: 1rem 3rem;
+				margin: 1rem 4rem;
 			}
 		}
 		.hamburger-wrap{
@@ -173,7 +174,7 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 	margin: 6px;
 }
 nav{
-	text-transform: uppercase;
+	text-transform: lowercase;
 }
 //FOOTER STYLES
 footer{
@@ -218,8 +219,11 @@ footer{
 }
 h1.entry-header{
 	text-align: center;
+	letter-spacing: .2em;
+	padding-bottom: 3rem;
 	text-transform: uppercase;
 	margin-top: 100px;
+
 }
 .content-wrap{
 	margin: auto;
@@ -237,7 +241,7 @@ a:hover{
 	background: rgba(10,15,18,.8) !important;
 }
 .vp-portfolio__items-style-fly .vp-portfolio__item-meta-title{
-	color: $color__link-hover !important;
+	color: $color__link!important;
 	text-transform: uppercase;
 	// border-left: solid 1px $color__link-hover;
 	// border-right: solid 1px $color__link-hover;
