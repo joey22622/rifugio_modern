@@ -74,7 +74,6 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 h1 {
 	color: #ddd;
 	font-size: 3.8rem;
-	letter-spacing: .2em;
 	border-bottom: solid rgba(255, 255, 255, 0.2) 1px;
 }
 
@@ -1020,6 +1019,37 @@ object {
 	-ms-flex-pack: justify;
 	    justify-content: space-between;
 	position: fixed;
+	z-index: 1;
+}
+
+.header-wrap .logo-gradient {
+	min-width: 350px;
+	height: 5rem;
+	padding: 1.2rem 3rem;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e2326+0,1e2326+100&1+0,0+100 */
+	/* FF3.6-15 */
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #1e2326 0%, rgba(30, 35, 38, 0) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 );
+	/* IE6-9 */
+}
+
+.header-wrap .logo-gradient a:hover svg * {
+	fill: #f8981d;
+}
+
+.header-wrap .logo-wrap {
+	height: 100%;
+}
+
+.header-wrap .logo-wrap svg {
+	height: 100%;
+}
+
+.header-wrap .logo-wrap svg * {
+	fill: white;
+	transition: .2s;
 }
 
 .main-navigation {
@@ -1166,10 +1196,28 @@ a:hover {
 	text-shadow: 1px 1px 2px black;
 }
 
+.vp-portfolio__items-style-fly .vp-portfolio__item-meta-category {
+	display: none !important;
+}
+
 html,
 body {
 	background-color: #1e2326 !important;
 	font-variant-numeric: lining-nums !important;
+}
+
+.vp-filter__style-default .vp-filter__item a {
+	background: none;
+	color: white;
+	font-family: "Corbel", "Gill Sans", sans-serif;
+}
+
+.vp-filter__style-default .vp-filter__item a:hover {
+	color: #f8981d;
+}
+
+.vp-filter__style-default .vp-filter__item.vp-filter__item-active > * {
+	color: #f8981d !important;
 }
 
 /*# sourceMappingURL=../glacier-child/sass/maps/style.css.map */

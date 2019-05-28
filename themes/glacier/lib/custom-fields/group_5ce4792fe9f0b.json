@@ -1,6 +1,6 @@
 {
     "key": "group_5ce4792fe9f0b",
-    "title": "Footer Info",
+    "title": "Universal Info",
     "fields": [
         {
             "key": "field_5ce47940c1d98",
@@ -105,6 +105,44 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5ced8a34762e2",
+            "label": "Homepage Logo",
+            "name": "home_logo",
+            "type": "textarea",
+            "instructions": "SVG format required",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5ced8a5f762e3",
+            "label": "Header Logo",
+            "name": "header_logo",
+            "type": "textarea",
+            "instructions": "SVG format required",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -124,5 +162,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558479310
+    "modified": 1559071662
 }

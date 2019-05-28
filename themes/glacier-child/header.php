@@ -45,6 +45,22 @@
   <div class="container-fluid">
     <div class="row">
       <div class="header-wrap">
+        <div class="logo-gradient">
+      <?php $logo = get_field('header_logo', 'option'); 
+      if($logo):
+       ?>
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <div class="logo-wrap"> 
+      <?php echo $logo ?>
+        </div>
+      </a>
+      <!-- logo-wrap -->
+
+       <?php
+      else:
+      ?>
+  
+
 
 
        <?php if ( true == get_theme_mod( 'logo_header' ) ) : ?>
@@ -69,8 +85,12 @@
          <div class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_attr( get_bloginfo("name") ); ?></a></div>
          <!-- END LOGO -->
 
-       <?php endif; ?>
-
+       <?php 
+       endif; 
+      endif;
+       
+      ?>
+      </div><!-- /.logo-gradient -->
 
 
            <?php if ( class_exists( 'WooCommerce' ) ) : ?>

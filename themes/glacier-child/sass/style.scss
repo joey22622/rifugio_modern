@@ -106,6 +106,38 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
+	z-index: 1;
+	
+	.logo-gradient{
+		min-width: 350px;
+		height: 5rem;
+		padding: 1.2rem 3rem;
+		// box-shadow: -100px 2px 50px rgba(0,0,0,.2);
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e2326+0,1e2326+100&1+0,0+100 */
+		background: -moz-linear-gradient(left, rgba(30,35,38,1) 0%, rgba(30,35,38,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, rgba(30,35,38,1) 0%,rgba(30,35,38,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgba(30,35,38,1) 0%,rgba(30,35,38,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 ); /* IE6-9 */
+		
+		a:hover{
+			svg{
+				*{
+					fill: $color__link-hover;
+				}
+			}
+		}
+	}
+
+	.logo-wrap{
+		height: 100%;
+		svg{
+			height: 100%;
+			*{
+				fill: white;
+				transition: .2s;
+			}
+		}
+	}
 }
 .main-navigation{
 	width: auto;
@@ -233,6 +265,7 @@ h1.entry-header{
 	// border-right: solid rgba(0,0,0,.8) 1px;
 
 }
+
 a:hover{
 	text-decoration: none;
 }
@@ -248,9 +281,27 @@ a:hover{
 	padding: .3rem 1rem;
 	text-shadow: 1px 1px 2px black;
 }
+.vp-portfolio__items-style-fly .vp-portfolio__item-meta-category{
+	display: none !important;
+}
 
 html,
 body{
 	background-color: rgba(30,35,38,1) !important;
 	font-variant-numeric: lining-nums !important;
+}
+
+//VISUAL PORTFOLIO OVERRIDES
+.vp-filter__style-default .vp-filter__item a{
+	background: none;
+	color: $color__link;
+	font-family: $font__main;
+
+	&:hover{
+		color: $color__link-hover;
+		// transition: .2s;
+	}
+}
+.vp-filter__style-default .vp-filter__item.vp-filter__item-active>*{
+	color: $color__link-hover !important;
 }

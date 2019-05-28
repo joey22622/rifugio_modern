@@ -15,9 +15,12 @@
 	<div class="content-wrap">
 
 			<?php
+				if(is_front_page()):
+
+				else:
 
 				the_title( '<h1 class="entry-header">', '</h1>' );
-
+				endif;
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
 
