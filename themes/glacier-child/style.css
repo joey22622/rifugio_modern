@@ -1077,6 +1077,17 @@ object {
 	opacity: 0;
 }
 
+.main-navigation .menu-wrap .menu-main-navigation-container {
+	height: 5rem;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e2326+0,1e2326+100&0+0,1+100 */
+	/* FF3.6-15 */
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(30, 35, 38, 0) 0%, #1e2326 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e2326', endColorstr='#1e2326',GradientType=1 );
+	/* IE6-9 */
+}
+
 .main-navigation .menu-wrap .menu-main-navigation-container ul li {
 	margin: 1rem 0rem;
 	opacity: .8;
@@ -1200,10 +1211,43 @@ a:hover {
 	display: none !important;
 }
 
+.vp-portfolio__filter-wrap {
+	margin-bottom: 3rem;
+}
+
 html,
 body {
 	background-color: #1e2326 !important;
 	font-variant-numeric: lining-nums !important;
+}
+
+.home-logo-wrap {
+	display: -ms-flexbox;
+	display: flex;
+	height: 85vh;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+
+.home-logo-wrap .logo-wrap {
+	height: 300px;
+	width: 300px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+
+.home-logo-wrap svg {
+	height: 100%;
+}
+
+.home-logo-wrap svg * {
+	fill: white;
 }
 
 .vp-filter__style-default .vp-filter__item a {

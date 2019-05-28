@@ -16,7 +16,20 @@
 
 			<?php
 				if(is_front_page()):
+			?>
+<div class="home-logo-wrap">
+<?php $logo = get_field('home_logo', 'option');
 
+?>
+        <div class="logo-wrap"> 
+      		<?php echo $logo ?>
+        </div>
+      <!-- logo-wrap -->
+
+</div>
+<!-- /.home-logo-wrap -->
+				
+			<?php
 				else:
 
 				the_title( '<h1 class="entry-header">', '</h1>' );
