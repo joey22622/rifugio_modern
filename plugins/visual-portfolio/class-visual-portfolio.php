@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  Visual Portfolio
  * Description:  Portfolio post type with visual editor
- * Version:      1.11.0
+ * Version:      1.11.1
  * Author:       nK
  * Author URI:   https://nkdev.info
  * License:      GPLv2 or later
@@ -210,9 +210,9 @@ class Visual_Portfolio {
         }
 
         // Visual Portfolio.
-        wp_register_script( 'visual-portfolio', visual_portfolio()->plugin_url . 'assets/js/script.min.js', $vp_deps, '1.11.0', true );
-        wp_register_style( 'visual-portfolio', visual_portfolio()->plugin_url . 'assets/css/style.min.css', $vp_style_deps, '1.11.0' );
-        wp_register_style( 'visual-portfolio-noscript', visual_portfolio()->plugin_url . 'assets/css/noscript.min.css', $vp_style_deps, '1.11.0' );
+        wp_register_script( 'visual-portfolio', visual_portfolio()->plugin_url . 'assets/js/script.min.js', $vp_deps, '1.11.1', true );
+        wp_register_style( 'visual-portfolio', visual_portfolio()->plugin_url . 'assets/css/style.min.css', $vp_style_deps, '1.11.1' );
+        wp_register_style( 'visual-portfolio-noscript', visual_portfolio()->plugin_url . 'assets/css/noscript.min.css', $vp_style_deps, '1.11.1' );
 
         // Visual Portfolio data.
         $data_init = array(

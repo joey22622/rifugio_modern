@@ -153,8 +153,8 @@ class Visual_Portfolio_Admin {
         wp_enqueue_script( 'tooltip.js', visual_portfolio()->plugin_url . 'assets/vendor/popper.js/tooltip.min.js', array( 'popper.js' ), '1.14.3', true );
         wp_enqueue_style( 'popper.js', visual_portfolio()->plugin_url . 'assets/vendor/popper.js/popper.css', '', '1.14.3' );
 
-        wp_enqueue_script( 'visual-portfolio-admin', visual_portfolio()->plugin_url . 'assets/admin/js/script.min.js', array( 'jquery' ), '1.11.0', true );
-        wp_enqueue_style( 'visual-portfolio-admin', visual_portfolio()->plugin_url . 'assets/admin/css/style.min.css', '', '1.11.0' );
+        wp_enqueue_script( 'visual-portfolio-admin', visual_portfolio()->plugin_url . 'assets/admin/js/script.min.js', array( 'jquery' ), '1.11.1', true );
+        wp_enqueue_style( 'visual-portfolio-admin', visual_portfolio()->plugin_url . 'assets/admin/css/style.min.css', '', '1.11.1' );
         wp_localize_script( 'visual-portfolio-admin', 'VPAdminVariables', $data_init );
     }
 
@@ -498,7 +498,7 @@ class Visual_Portfolio_Admin {
         if ( ! is_blog_installed() ) {
             return;
         }
-        if ( get_option( 'visual_portfolio_updated_caps' ) === '1.11.0' ) {
+        if ( get_option( 'visual_portfolio_updated_caps' ) === '1.11.1' ) {
             return;
         }
 
@@ -574,7 +574,7 @@ class Visual_Portfolio_Admin {
             $wp_roles->add_cap( 'administrator', $cap );
         }
 
-        update_option( 'visual_portfolio_updated_caps', '1.11.0' );
+        update_option( 'visual_portfolio_updated_caps', '1.11.1' );
     }
 
     /**

@@ -62,9 +62,10 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 	font-style: italic;
 }
 
-p, span, a {
+p, span, a, li {
 	font-family: "Corbel", "Gill Sans", sans-serif;
 	font-size: 1.6rem;
+	font-weight: 100;
 }
 
 h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {

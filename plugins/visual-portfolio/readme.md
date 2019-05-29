@@ -5,7 +5,7 @@
 * Requires at least: 4.0.0
 * Tested up to: 5.2
 * Requires PHP: 5.4
-* Stable tag: 1.11.0
+* Stable tag: 1.11.1
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,14 @@ The manual installation method involves downloading our Visual Portfolio plugin 
 [https://visualportfolio.co/documentation/developers/jquery-methods/](https://visualportfolio.co/documentation/developers/jquery-methods/)
 
 ## Changelog ##
+
+= 1.11.1 =
+
+* fixed FireFox image blinking in Fade effect
+* fixed name of sorting by date items ('newest' is actually 'oldest')
+* fixed conflict with elementor carousel event
+* fixed conflict with SG Optimizer (remove noscript tag)
+* fixed w3 validation errors (figcaption tag may only be a child of figure tag)
 
 = 1.11.0 =
 

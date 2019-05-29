@@ -1340,8 +1340,8 @@ class Visual_Portfolio_Get {
 
         $sort_items = array(
             '' => esc_html__( 'Default sorting', 'visual-portfolio' ),
-            'date' => esc_html__( 'Sort by date (newest)', 'visual-portfolio' ),
-            'date_desc' => esc_html__( 'Sort by date (oldest)', 'visual-portfolio' ),
+            'date_desc' => esc_html__( 'Sort by date (newest)', 'visual-portfolio' ),
+            'date' => esc_html__( 'Sort by date (oldest)', 'visual-portfolio' ),
             'title' => esc_html__( 'Sort by title (A-Z)', 'visual-portfolio' ),
             'title_desc' => esc_html__( 'Sort by title (Z-A)', 'visual-portfolio' ),
         );
