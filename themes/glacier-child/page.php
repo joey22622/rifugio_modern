@@ -51,7 +51,6 @@
 
 	</div>
 
-
 	<div class="col-md-3 glacier-padding-left">
 
 		<?php get_sidebar(); ?>

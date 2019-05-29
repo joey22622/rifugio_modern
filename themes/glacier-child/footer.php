@@ -2,6 +2,23 @@
 </div>
 <!-- END WRAPPER -->  
 
+<?php
+        $map = get_field("show_map");
+        if($map):
+        ?>
+                <div class="map-wrap">
+                        <div id="map"></div>
+                        <!-- /#map -->
+                </div>
+                <!-- /.map-wrap -->
+        <?php
+        endif;
+        include('keys.php');
+?>
+
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=<?php echo $googleKey ?>&#038;callback=initMap&#038;ver=1' async='async' defer='defer'></script>
+
+
 <!-- FOOTER -->
 <footer class="footer">
 

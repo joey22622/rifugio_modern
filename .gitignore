@@ -2,3 +2,4 @@ uploads
 */gulp-dev
 package-lock.json
 package.json
+keys.php

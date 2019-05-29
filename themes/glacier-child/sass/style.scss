@@ -145,6 +145,23 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 	.menu-wrap{
 		transform: translateX(100px);
 	}
+
+	&.active{
+		.hamburger{
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+	.menu-main-navigation-container ul>li:hover{ 
+		&>a{
+			color: $color__link-hover;
+		}
+		ul{
+			transform: translateX(0);
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
 }
 
 .main-navigation{
@@ -171,18 +188,37 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 		.menu-main-navigation-container{
 			height: 5rem;
 			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e2326+0,1e2326+100&0+0,1+100 */
-background: -moz-linear-gradient(left, rgba(30,35,38,0) 0%, rgba(30,35,38,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, rgba(30,35,38,0) 0%,rgba(30,35,38,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, rgba(30,35,38,0) 0%,rgba(30,35,38,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e2326', endColorstr='#1e2326',GradientType=1 ); /* IE6-9 */
-			ul li{
-				margin: 1rem 0rem;
-				opacity: .8;
-				transition: .4s;
-				text-shadow: $color__text-shadow;
+			background: -moz-linear-gradient(left, rgba(30,35,38,0) 0%, rgba(30,35,38,1) 70%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, rgba(30,35,38,0) 0%,rgba(30,35,38,1) 70%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, rgba(30,35,38,0) 0%,rgba(30,35,38,1) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e2326', endColorstr='#1e2326',GradientType=1 ); /* IE6-9 */
 
-				ul{
-					text-transform: none;
+			ul {
+				list-style-type: none;
+				display: flex;
+				li{
+					margin: 1rem 0rem;
+					opacity: .8;
+					transition: .4s;
+					text-shadow: $color__text-shadow;
+					position: relative;
+
+					ul{
+						text-transform: none;
+						flex-direction: column;
+						transform: translateX(-50px);
+						pointer-events: none;
+						opacity: 0;
+						transition: .2s;
+						background:rgba(30,35,38,1);
+						box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+						margin: 0;
+						margin-top: 2rem;
+						padding: 0;
+						li a{
+							margin: 1rem 4rem;
+						}
+					}
 				}
 			}
 		}
@@ -194,16 +230,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e2326', e
 			opacity: 1;
 
 			ul li{
-				margin: 1rem 4rem;
-
+				
 				a{
+					margin: 1rem 4rem;
 				}
 				
 			}
 		}
 		.hamburger-wrap{
-			opacity: 0;
-			pointer-events: none;
+
 
 		}
 
@@ -223,6 +258,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e2326', e
 	width: 28px;
 	background: white;
 	margin: 6px;
+	box-shadow: 1px 1px 2px black;
 }
 nav{
 	text-transform: lowercase;
@@ -348,4 +384,15 @@ body{
 }
 .vp-filter__style-default .vp-filter__item.vp-filter__item-active>*{
 	color: $color__link-hover !important;
+}	
+
+
+//CUSTOM MAP
+.map-wrap{
+	width: 100vw;
+	height: 40rem;
+}
+#map{
+	height: 100%;
+	width: 100%;
 }

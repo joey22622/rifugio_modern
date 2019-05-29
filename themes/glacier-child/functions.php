@@ -28,7 +28,10 @@ function glacier_child_enqueue_styles() {
 
 function glacier_child_enqueue_scripts() {
 	wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/assets/js/custom-scripts.js', array('jquery'), '1.0', true );
+	wp_enqueue_script( 'google-maps', get_stylesheet_directory_uri() . '/assets/js/google_maps.js', '1.0', true );
+
 }
+
 
 
 function custom_post_type() {
