@@ -676,6 +676,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul {
+	background: #1e2326;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
@@ -1052,6 +1053,14 @@ object {
 	transition: .2s;
 }
 
+.hasHover .main-navigation {
+	padding-left: 200px;
+}
+
+.hasHover .main-navigation .menu-wrap {
+	transform: translateX(100px);
+}
+
 .main-navigation {
 	width: auto;
 	transition: .2s;
@@ -1060,12 +1069,16 @@ object {
 	-ms-flex-pack: end;
 	    justify-content: flex-end;
 	min-height: 50px;
-	padding-left: 200px;
 	padding: 0 1rem;
 }
 
 .main-navigation .hamburger-wrap {
 	position: absolute;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	height: 5rem;
 	right: 0;
 	z-index: 1;
 	transition: .2s;
@@ -1073,7 +1086,6 @@ object {
 
 .main-navigation .menu-wrap {
 	transition: .2s;
-	transform: translateX(100px);
 	opacity: 0;
 }
 
@@ -1140,7 +1152,7 @@ nav {
 }
 
 footer {
-	margin-top: 5rem;
+	margin-top: 12rem;
 }
 
 .footer-inner {

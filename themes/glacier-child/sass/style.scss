@@ -139,25 +139,34 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 		}
 	}
 }
+
+.hasHover .main-navigation{
+	padding-left: 200px;
+	.menu-wrap{
+		transform: translateX(100px);
+	}
+}
+
 .main-navigation{
 	width: auto;
 	transition: .2s;
 	display: flex;
 	justify-content: flex-end;
 	min-height: 50px;
-	padding-left: 200px;
 	padding: 0 1rem;
 
 
 	.hamburger-wrap{
 		position: absolute;
+		display: flex;
+		align-items: center;
+		height: 5rem;
 		right: 0;
 		z-index: 1;
 		transition: .2s;
 	}
 	.menu-wrap{
 		transition: .2s;
-		transform: translateX(100px);
 		opacity: 0;
 		.menu-main-navigation-container{
 			height: 5rem;
@@ -220,7 +229,7 @@ nav{
 }
 //FOOTER STYLES
 footer{
-	margin-top: 5rem;
+	margin-top: 12rem;
 }
 .footer-inner{
 	display: flex;
