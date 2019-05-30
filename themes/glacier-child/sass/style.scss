@@ -151,15 +151,20 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 			opacity: 0;
 			pointer-events: none;
 		}
-	}
-	.menu-main-navigation-container ul>li:hover{ 
-		&>a{
-			color: $color__link-hover;
-		}
-		ul{
+		.menu-wrap{
 			transform: translateX(0);
-			opacity: 1;
-			pointer-events: all;
+		}
+	}
+	.menu-main-navigation-container ul{
+		&>li:hover{ 
+			&>a{
+				color: $color__link-hover;
+			}
+			ul{
+				transform: translateX(0);
+				opacity: 1;
+				pointer-events: all;
+			}
 		}
 	}
 }
@@ -183,6 +188,7 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 		transition: .2s;
 	}
 	.menu-wrap{
+		transform: translateY(100px);
 		transition: .2s;
 		opacity: 0;
 		.menu-main-navigation-container{
@@ -196,6 +202,7 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 			ul {
 				list-style-type: none;
 				display: flex;
+				flex-direction: row;
 				li{
 					margin: 1rem 0rem;
 					opacity: .8;
@@ -226,7 +233,7 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 	&.active{
 		min-height: 200px;
 		.menu-wrap{
-			transform: translateX(0);
+			transform: translateY(0);
 			opacity: 1;
 
 			ul li{
@@ -243,6 +250,10 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 		}
 
 	}	
+}
+
+@media only screen and (min-width: 750px){
+
 }
 
 .hamburger{

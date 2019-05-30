@@ -978,6 +978,10 @@ object {
 	pointer-events: none;
 }
 
+.hasHover .main-navigation.active .menu-wrap {
+	transform: translateX(0);
+}
+
 .hasHover .main-navigation .menu-main-navigation-container ul > li:hover > a {
 	color: #f8981d;
 }
@@ -1012,6 +1016,7 @@ object {
 }
 
 .main-navigation .menu-wrap {
+	transform: translateY(100px);
 	transition: .2s;
 	opacity: 0;
 }
@@ -1031,6 +1036,8 @@ object {
 	list-style-type: none;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-direction: row;
+	    flex-direction: row;
 }
 
 .main-navigation .menu-wrap .menu-main-navigation-container ul li {
@@ -1065,7 +1072,7 @@ object {
 }
 
 .main-navigation.active .menu-wrap {
-	transform: translateX(0);
+	transform: translateY(0);
 	opacity: 1;
 }
 
