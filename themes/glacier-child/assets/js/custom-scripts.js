@@ -64,7 +64,7 @@ html.addEventListener("mouseenter", function(){
                 if(navActive && !navHover){
                     navActive = false;
                     console.log("html mouseover ");
-                    $(".main-navigation .active").removeClass("active");
+                    $(".main-navigation").removeClass("active");
                 }
             },150);
         }
