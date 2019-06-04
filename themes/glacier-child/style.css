@@ -1188,6 +1188,7 @@ h1.entry-header {
 	padding-bottom: 3rem;
 	text-transform: uppercase;
 	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
 .content-wrap {
@@ -1200,7 +1201,8 @@ a:hover {
 	text-decoration: none;
 }
 
-.vp-id-1998 .vp-portfolio__items-style-fly .vp-portfolio__item-overlay {
+.vp-id-1998 .vp-portfolio__items-style-fly .vp-portfolio__item-overlay,
+.vp-id-864 .vp-portfolio__items-style-fly .vp-portfolio__item-overlay {
 	background: rgba(10, 15, 18, 0.8) !important;
 }
 
@@ -1276,6 +1278,142 @@ body {
 #map {
 	height: 100%;
 	width: 100%;
+}
+
+.page-id-2091 .content-wrap {
+	max-width: 1100px;
+	padding: 25px 0;
+}
+
+.page-id-2091 .contact-row p {
+	margin-bottom: 0;
+}
+
+.page-id-2091 .contact-image {
+	text-align: right;
+}
+
+.page-id-2091 .contact-image img {
+	max-height: 550px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.page-id-2091 .bio-wrap {
+	padding: 0 1.4rem;
+}
+
+.page-id-2091 .address-row,
+.page-id-2091 .contact-row {
+	border-top: solid 1px rgba(255, 255, 255, 0.1);
+	padding: 2rem 1rem;
+}
+
+.page-id-2091 .address-row .wpb_content_element,
+.page-id-2091 .contact-row .wpb_content_element {
+	margin-bottom: 0;
+}
+
+.page-id-2091 .address-row p,
+.page-id-2091 .contact-row p {
+	opacity: .8;
+}
+
+.page-id-2091 h4 {
+	font-size: 2.2rem;
+}
+
+.single-brand h1 {
+	letter-spacing: .1em;
+	margin: 0;
+	border-bottom: none;
+}
+
+.single-brand .content-wrap {
+	max-width: 950px;
+}
+
+.single-brand .post-title-row {
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	-ms-flex-align: end;
+	    align-items: flex-end;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+	margin-top: 150px;
+	margin-bottom: 50px;
+	padding-bottom: 1.2rem;
+	padding: 1.2rem 150px;
+}
+
+.single-brand .post-title-row .logo-wrap {
+	height: 8rem;
+	position: absolute;
+	right: 150px;
+}
+
+.single-brand .post-title-row .logo-wrap svg {
+	height: 100%;
+}
+
+.single-brand .post-title-row .logo-wrap svg * {
+	fill: rgba(255, 255, 255, 0.1);
+}
+
+.single-brand .overlay-box {
+	height: 5rem;
+}
+
+.single-brand .gallery-projects {
+	padding: 15px;
+}
+
+.single-brand .gallery-projects img {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.single-brand .project-bio {
+	padding: 4rem 8rem;
+}
+
+.single-brand .project-details {
+	letter-spacing: .1rem;
+}
+
+.single-brand .project-details a {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	width: 30em;
+	transition: .2s;
+}
+
+.single-brand .project-details a span {
+	font-size: 2.2rem;
+	margin: 0 2rem;
+}
+
+.single-brand .project-details .line-left {
+	width: 3rem;
+}
+
+.single-brand .project-details .line-right {
+	width: 6rem;
+}
+
+.single-brand .project-details div {
+	height: 1px;
+	background: rgba(255, 255, 255, 0.6);
+	transition: .2s;
+}
+
+.single-brand .project-details:hover .line-right {
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
 }
 
 /*# sourceMappingURL=../glacier-child/sass/maps/style.css.map */

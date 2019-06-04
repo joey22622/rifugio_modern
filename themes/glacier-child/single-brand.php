@@ -84,7 +84,7 @@
 				</div>
 					<?php if ( $column_single == 'col-md-6' || $column_single == 'col-md-4' || $column_single == 'col-md-3') : ?> 
 
-						<div class="row">
+						<div class="row content-wrap">
 
 					<?php endif; ?>
 
@@ -92,11 +92,11 @@
 
 				        <?php foreach ( $images as $image ) : ?>
 				            <div class="gallery-projects <?php echo esc_html($column_single); ?>">
-				             <div class="overlay-box">
+				             <!-- <div class="overlay-box"> -->
 				                <a href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['title']); ?>" class="showcase" data-rel="lightcase:gallery">
 									 <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_html($image['alt']); ?>">
 				                </a>
-				             </div>	
+				             <!-- </div>	 -->
 				            </div>
 				        <?php endforeach; ?>
 
@@ -110,7 +110,7 @@
 
 			</div>
 			<!-- END VARIANT PROJECT 3 -->
-
+			<div class="content-wrap project-bio">
 			<?php endif; ?>
 			
 
@@ -135,7 +135,11 @@
 
 
 				<div class="project-details">
-					<a href="<?php echo $website ?>" class="brand-website" target="_blank">visit website</a> <!-- /.brand-website -->
+					<a href="<?php echo $website ?>" class="brand-website" target="_blank">
+					<div class="line-left"></div>
+						<span>visit website</span>
+					<div class="line-right"></div>
+					</a> <!-- /.brand-website -->
 <?php
 
 
@@ -152,14 +156,13 @@
 				<?php endif; ?>
 
 			</div>
-			
+			</div>
 
 		 </div>
 
 		 <!-- NAVIGATION -->
 		 <div class="portfolio-single-nav">
 
-			<?php echo glacier_single_navigation(); ?>
 
 		 </div>
 		 <!-- END NAVIGATION -->

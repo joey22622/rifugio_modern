@@ -108,6 +108,8 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 // 	--HOMEPAGE
 // 	--VISUAL PORTFOLIO PLUGIN OVERRIDES
 // 	--GOOGLE MAPS STYLES
+// 	--ABOUT PAGE
+// 	--BRAND PAGE
 
 //HEADER STYLES
 .header-wrap{
@@ -374,6 +376,7 @@ h1.entry-header{
 	padding-bottom: 3rem;
 	text-transform: uppercase;
 	margin-top: 100px;
+	margin-bottom: 100px;
 
 }
 .content-wrap{
@@ -386,7 +389,8 @@ a:hover{
 	text-decoration: none;
 }
 
-.vp-id-1998 .vp-portfolio__items-style-fly .vp-portfolio__item-overlay {	
+.vp-id-1998 .vp-portfolio__items-style-fly .vp-portfolio__item-overlay,
+.vp-id-864 .vp-portfolio__items-style-fly .vp-portfolio__item-overlay {	
 	background: rgba(10,15,18,.8) !important;
 }
 .vp-portfolio__items-style-fly .vp-portfolio__item-meta-title{
@@ -454,4 +458,129 @@ body{
 #map{
 	height: 100%;
 	width: 100%;
+}
+
+// ABOUT PAGE
+// page-id-2091
+.page-id-2091 .content-wrap{
+	max-width: 1100px;
+	padding: 25px 0;
+}
+
+.page-id-2091 {
+
+	.contact-row p{
+		margin-bottom: 0;
+
+	}
+	.contact-image {
+		text-align: right;
+		img{
+			max-height: 550px;
+			object-fit: cover;
+		}
+	}
+	.bio-wrap{
+		padding: 0 1.4rem;
+	}
+	.address-row,
+	.contact-row{
+		// margin-left: 25px;
+		border-top: solid 1px rgba(255,255,255,.1);
+		padding: 2rem 1rem;
+
+		.wpb_content_element{
+			margin-bottom: 0;
+		}
+		p{
+			opacity: .8;
+		}
+	}
+	h4{
+		font-size: 2.2rem;
+		// opacity: .8;
+	}
+
+}
+
+.single-brand{
+	h1{
+		letter-spacing: .1em;
+		// padding-left: 3rem;
+		// text-transform: uppercase;
+		margin: 0;
+
+		border-bottom: none;
+	}
+	.content-wrap{
+		max-width: 950px;
+	}
+	.post-title-row{
+		display: flex;
+		position: relative;
+		// justify-content: space-between;
+		align-items: flex-end;
+		border-bottom: solid 1px rgba(255,255,255,.4);
+		margin-top: 150px;
+		margin-bottom: 50px;
+		padding-bottom: 1.2rem;
+		padding: 1.2rem 150px;
+
+		.logo-wrap{
+			height: 8rem;
+			position: absolute;
+			right: 150px;
+			svg{
+				height: 100%;
+				*{
+					fill: rgba(255,255,255,.1);
+				}
+			}
+		}
+	}
+	.overlay-box{
+		height: 5rem;
+	}
+	.gallery-projects{
+		padding: 15px;
+		img{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	.project-bio{
+		padding: 4rem 8rem;
+	}
+
+	.project-details{
+		letter-spacing: .1rem;
+		a{
+			display: flex;
+			align-items: center;
+			width: 30em;
+			transition: .2s;
+			span{
+				font-size: 2.2rem;
+				margin: 0 2rem;
+			}
+		}
+		.line-left{
+			width: 3rem;
+		}
+		.line-right{
+			width: 6rem;
+		}
+		div{
+			height: 1px;
+			background: rgba(255,255,255,.6);
+			// margin: 2rem;
+			transition: .2s;
+		}
+		&:hover{
+			.line-right{
+				flex-grow: 1;
+			}
+		}
+	}
 }

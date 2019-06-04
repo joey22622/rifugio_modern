@@ -19,6 +19,27 @@ $(window).on("scroll", function(){
     }
 });
 
+function scrollToContent(targetElem){
+    var contentTop = $(targetElem).offset().top;
+    $('html, body').animate({scrollTop: contentTop-50}, 300);s
+}
+
+$("body").on("click", ".vp-filter__item a", function(){
+    scrollToContent(this);
+    console.log("what up");
+});
+
+function widthToHeight(jQelem){
+   var width = $(jQelem).width();
+   $(jQelem).css("height" , width);
+   console.log("hi")
+}
+
+// $(".gallery-projects").each(widthToHeight(this));
+$(".gallery-projects").each(function(i, obj){
+    widthToHeight(this);
+});
+
 nav.addEventListener("mouseover", function(){
     if($("body").hasClass("hasHover")){
         navHover = true;
