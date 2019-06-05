@@ -110,7 +110,7 @@
 
 			</div>
 			<!-- END VARIANT PROJECT 3 -->
-			<div class="content-wrap project-bio">
+			<div class="content-wrap project-details">
 			<?php endif; ?>
 			
 
@@ -134,7 +134,7 @@
 
 
 
-				<div class="project-details">
+				<div class="project-link">
 					<a href="<?php echo $website ?>" class="brand-website" target="_blank">
 					<div class="line-left"></div>
 						<span>visit website</span>
@@ -152,6 +152,7 @@
 				<?php endif; ?>
 
 				</div>
+				<!-- /.project-details -->
 
 				<?php endif; ?>
 

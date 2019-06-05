@@ -529,7 +529,7 @@ body{
 		.logo-wrap{
 			height: 8rem;
 			position: absolute;
-			right: 150px;
+			right: 10px;
 			svg{
 				height: 100%;
 				*{
@@ -542,20 +542,23 @@ body{
 		height: 5rem;
 	}
 	.gallery-projects{
-		padding: 15px;
+		padding: 5px;
 		img{
-			height: 100%;
+			height: 100%; 
 			width: 100%;
 			object-fit: cover;
 		}
 	}
-	.project-bio{
+	.project-details{
 		padding: 4rem 8rem;
+		border-left: solid 1px rgba(255,255,255,.8);
+		border-right: solid 1px rgba(255,255,255,.8);
 	}
 
-	.project-details{
-		letter-spacing: .1rem;
+	.project-link{
+		margin-top: 4rem;
 		a{
+			letter-spacing: .1rem;
 			display: flex;
 			align-items: center;
 			width: 30em;
