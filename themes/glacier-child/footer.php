@@ -5,18 +5,15 @@
 <?php
         $map = get_field("show_map");
         if($map):
+                include('keys.php');
+
         ?>
-                <div class="map-wrap">
-                        <div id="map"></div>
-                        <!-- /#map -->
-                </div>
-                <!-- /.map-wrap -->
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=<?php echo $googleKey ?>&#038;callback=initMap&#038;ver=1' async='async' defer='defer'></script>
+
         <?php
         endif;
-        include('keys.php');
 ?>
 
-<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=<?php echo $googleKey ?>&#038;callback=initMap&#038;ver=1' async='async' defer='defer'></script>
 
 
 <!-- FOOTER -->

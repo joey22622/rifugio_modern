@@ -8,7 +8,11 @@ var navHover = false;
 var windowActive = true;
 var html = document.querySelector("html");
 var htmlInTimeout;
+var anchor = $("#glacier_menu .has-sub>a");
 
+anchor.click(function(e){
+    e.preventDefault();
+});
 
 console.log(nav);
 $(window).on("scroll", function(){
@@ -21,7 +25,7 @@ $(window).on("scroll", function(){
 
 function scrollToContent(targetElem){
     var contentTop = $(targetElem).offset().top;
-    $('html, body').animate({scrollTop: contentTop-50}, 300);s
+    $('html, body').animate({scrollTop: contentTop-50}, 300);
 }
 
 $("body").on("click", ".vp-filter__item a", function(){

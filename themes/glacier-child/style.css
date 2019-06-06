@@ -941,7 +941,7 @@ object {
 	padding: 1.2rem 3rem;
 	/* FF3.6-15 */
 	/* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #1e2326 0%, rgba(30, 35, 38, 0) 100%);
+	background: linear-gradient(to right, #1e2326 0%, rgba(30, 35, 38, 0.5) 70%, rgba(30, 35, 38, 0) 100%);
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 );
 	/* IE6-9 */
@@ -965,7 +965,7 @@ object {
 }
 
 .hasHover .main-navigation {
-	padding-left: 200px;
+	padding-left: 500px;
 }
 
 .hasHover .main-navigation .menu-wrap {
@@ -989,10 +989,22 @@ object {
 	    flex-direction: row;
 	-ms-flex-pack: end;
 	    justify-content: flex-end;
+	height: 5rem;
 }
 
 .hasHover .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul {
-	margin-top: 2rem;
+	background: none;
+	padding-top: 3rem;
+}
+
+.hasHover .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul li {
+	padding: 1rem;
+	margin: 0;
+	background: rgba(10, 15, 18, 0.8);
+}
+
+.hasHover .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul li a {
+	display: block;
 }
 
 .hasHover .main-navigation .menu-wrap .menu-main-navigation-container > ul > li:hover > a {
@@ -1005,7 +1017,6 @@ object {
 	pointer-events: all;
 	max-height: none;
 	overflow: visible;
-	margin-top: 2rem;
 }
 
 .hasHover .main-navigation.active .hamburger {
@@ -1042,6 +1053,7 @@ object {
 
 .main-navigation .menu-wrap {
 	transform: translateY(-100px);
+	width: 100%;
 	transition: .2s;
 	opacity: 0;
 	position: absolute;
@@ -1062,6 +1074,14 @@ object {
 	display: flex;
 	-ms-flex-direction: column;
 	    flex-direction: column;
+	margin: 1rem;
+	background: rgba(10, 15, 18, 0.8);
+}
+
+@media only screen and (min-width: 768px) {
+	.main-navigation .menu-wrap .menu-main-navigation-container > ul {
+		margin: 0;
+	}
 }
 
 .main-navigation .menu-wrap .menu-main-navigation-container > ul li {
@@ -1083,15 +1103,19 @@ object {
 	opacity: 0;
 	transition: .2s;
 	background: #1e2326;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	background: none;
 	margin: 0;
 	padding: 0;
 	max-height: 0;
 	overflow: hidden;
 }
 
+.main-navigation .menu-wrap .menu-main-navigation-container > ul li ul li {
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
 .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul li a {
-	padding: 1rem 4rem;
+	padding: .8rem 4rem;
 }
 
 .main-navigation .menu-wrap .menu-main-navigation-container > ul > li.active > a {
@@ -1194,7 +1218,6 @@ h1.entry-header {
 
 .content-wrap {
 	margin: auto;
-	max-width: 850px;
 	padding: 25px;
 }
 
@@ -1322,6 +1345,188 @@ body {
 
 .page-id-2091 h4 {
 	font-size: 2.2rem;
+}
+
+.single-brand h1 {
+	letter-spacing: .1em;
+	line-height: .6em;
+	margin: 0;
+	border-bottom: none;
+}
+
+.single-brand .content-wrap {
+	max-width: 950px;
+}
+
+.single-brand .post-title-row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: end;
+	    align-items: flex-end;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+	margin-top: 150px;
+	margin-bottom: 50px;
+	padding-bottom: 1.2rem;
+	padding: 1.2rem;
+}
+
+.single-brand .post-title-row .title-inner-wrap {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: end;
+	    align-items: flex-end;
+	padding: 0 5rem;
+	width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+	.single-brand .post-title-row .title-inner-wrap {
+		width: 950px;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
+	}
+}
+
+.single-brand .post-title-row .logo-wrap {
+	display: none;
+	height: 8rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.single-brand .post-title-row .logo-wrap {
+		display: block;
+	}
+}
+
+.single-brand .post-title-row .logo-wrap svg {
+	height: 100%;
+}
+
+.single-brand .post-title-row .logo-wrap svg * {
+	fill: rgba(255, 255, 255, 0.1);
+}
+
+.single-brand .overlay-box {
+	height: 5rem;
+}
+
+.single-brand .gallery-projects {
+	padding: 5px;
+}
+
+.single-brand .gallery-projects img {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.single-brand .project-details {
+	padding: 4rem 0;
+	text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+	.single-brand .project-details {
+		padding: 4rem 4rem;
+		text-align: left;
+	}
+}
+
+.single-brand .project-link {
+	margin-top: 4rem;
+}
+
+.single-brand .project-link a {
+	letter-spacing: .1rem;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	width: 100%;
+	transition: .2s;
+}
+
+@media only screen and (min-width: 768px) {
+	.single-brand .project-link a {
+		width: 30em;
+	}
+}
+
+.single-brand .project-link a span {
+	font-size: 2.2rem;
+	margin: 0 2rem;
+}
+
+.single-brand .project-link .line-left {
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
+}
+
+@media only screen and (min-width: 768px) {
+	.single-brand .project-link .line-left {
+		width: 3rem;
+		-ms-flex-positive: unset;
+		    flex-grow: unset;
+	}
+}
+
+.single-brand .project-link .line-right {
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
+}
+
+@media only screen and (min-width: 768px) {
+	.single-brand .project-link .line-right {
+		width: 8rem;
+		-ms-flex-positive: unset;
+		    flex-grow: unset;
+	}
+}
+
+.single-brand .project-link div {
+	height: 1px;
+	background: rgba(255, 255, 255, 0.6);
+	transition: .2s;
+}
+
+.single-brand .project-link:hover .line-right {
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
+}
+
+.hasHover .gallery-projects {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.hasHover .gallery-projects a {
+	display: block;
+	position: relative;
+	cursor: pointer;
+}
+
+.hasHover .gallery-projects a::after {
+	content: '';
+	margin: auto;
+	display: block;
+	height: 100%;
+	position: absolute;
+	border: solid 2px white;
+	top: 0;
+	width: 100%;
+	transition: .2s;
+	opacity: 0;
+}
+
+.hasHover .gallery-projects a:hover::after {
+	opacity: 1;
+	height: 100%;
+	width: 100%;
 }
 
 /*# sourceMappingURL=../glacier-child/sass/maps/style.css.map */

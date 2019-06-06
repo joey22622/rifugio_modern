@@ -12,19 +12,19 @@
 <div class="container">
   <div class="row d-flex justify-content-center">
   
-	<div class="content-wrap">
+	<div class="col-md-10 offset-md-1 content-wrap">
 
 			<?php
 				if(is_front_page()):
 			?>
-<div class="home-logo-wrap">
+		<div class="home-logo-wrap">
 <?php $logo = get_field('home_logo', 'option');
 
 ?>
-        <div class="logo-wrap"> 
-      		<?php echo $logo ?>
-        </div>
-      <!-- logo-wrap -->
+        	<div class="logo-wrap"> 
+      			<?php echo $logo ?>
+        	</div>
+      		<!-- logo-wrap -->
 
 </div>
 <!-- /.home-logo-wrap -->
@@ -49,7 +49,14 @@
 
 			?>
 
+			
+
+
+
+
+
 	</div>
+
 
 	<div class="col-md-3 glacier-padding-left">
 
@@ -59,5 +66,25 @@
 
  </div>
 </div>
+<?php
+        $map = get_field("show_map");
+        if($map):
+		?>
+		<div class="container-fluid map-container">
+			<div class="row map-row">
+				<div class="map-wrap col-12-md">
+						<div id="map"></div>
+						<!-- /#map -->
+				</div>
+				<!-- /.map-wrap -->				
+			</div>
+			<!-- /.row map-row -->			
+		</div>
+		<!-- /.container-fluid map-container -->
+
+
+        <?php
+        endif;
+?>
 
 <?php get_footer(); ?>
