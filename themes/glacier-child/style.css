@@ -1145,6 +1145,7 @@ nav {
 
 footer {
 	margin-top: 12rem;
+	margin-bottom: 1rem;
 }
 
 .footer-inner {
@@ -1321,102 +1322,6 @@ body {
 
 .page-id-2091 h4 {
 	font-size: 2.2rem;
-}
-
-.single-brand h1 {
-	letter-spacing: .1em;
-	margin: 0;
-	border-bottom: none;
-}
-
-.single-brand .content-wrap {
-	max-width: 950px;
-}
-
-.single-brand .post-title-row {
-	display: -ms-flexbox;
-	display: flex;
-	position: relative;
-	-ms-flex-align: end;
-	    align-items: flex-end;
-	border-bottom: solid 1px rgba(255, 255, 255, 0.4);
-	margin-top: 150px;
-	margin-bottom: 50px;
-	padding-bottom: 1.2rem;
-	padding: 1.2rem 150px;
-}
-
-.single-brand .post-title-row .logo-wrap {
-	height: 8rem;
-	position: absolute;
-	right: 10px;
-}
-
-.single-brand .post-title-row .logo-wrap svg {
-	height: 100%;
-}
-
-.single-brand .post-title-row .logo-wrap svg * {
-	fill: rgba(255, 255, 255, 0.1);
-}
-
-.single-brand .overlay-box {
-	height: 5rem;
-}
-
-.single-brand .gallery-projects {
-	padding: 5px;
-}
-
-.single-brand .gallery-projects img {
-	height: 100%;
-	width: 100%;
-	-o-object-fit: cover;
-	   object-fit: cover;
-}
-
-.single-brand .project-details {
-	padding: 4rem 8rem;
-	border-left: solid 1px rgba(255, 255, 255, 0.8);
-	border-right: solid 1px rgba(255, 255, 255, 0.8);
-}
-
-.single-brand .project-link {
-	margin-top: 4rem;
-}
-
-.single-brand .project-link a {
-	letter-spacing: .1rem;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-align: center;
-	    align-items: center;
-	width: 30em;
-	transition: .2s;
-}
-
-.single-brand .project-link a span {
-	font-size: 2.2rem;
-	margin: 0 2rem;
-}
-
-.single-brand .project-link .line-left {
-	width: 3rem;
-}
-
-.single-brand .project-link .line-right {
-	width: 6rem;
-}
-
-.single-brand .project-link div {
-	height: 1px;
-	background: rgba(255, 255, 255, 0.6);
-	transition: .2s;
-}
-
-.single-brand .project-link:hover .line-right {
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
 }
 
 /*# sourceMappingURL=../glacier-child/sass/maps/style.css.map */

@@ -111,7 +111,9 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 // 	--ABOUT PAGE
 // 	--BRAND PAGE
 
+
 //HEADER STYLES
+
 .header-wrap{
 	width: 100%;
 	display: flex;
@@ -334,6 +336,7 @@ nav{
 //FOOTER STYLES
 footer{
 	margin-top: 12rem;
+	margin-bottom: 1rem;
 }
 .footer-inner{
 	display: flex;
@@ -504,86 +507,93 @@ body{
 }
 
 .single-brand{
-	h1{
-		letter-spacing: .1em;
-		// padding-left: 3rem;
-		// text-transform: uppercase;
-		margin: 0;
+	// h1{
+	// 	letter-spacing: .1em;
+	// 	line-height: .6em;
+	// 	margin: 0;
 
-		border-bottom: none;
-	}
-	.content-wrap{
-		max-width: 950px;
-	}
-	.post-title-row{
-		display: flex;
-		position: relative;
-		// justify-content: space-between;
-		align-items: flex-end;
-		border-bottom: solid 1px rgba(255,255,255,.4);
-		margin-top: 150px;
-		margin-bottom: 50px;
-		padding-bottom: 1.2rem;
-		padding: 1.2rem 150px;
+	// 	border-bottom: none;
+	// }
+	// .content-wrap{
+	// 	max-width: 950px;
+	// }
+	// .post-title-row{
+	// 	display: flex;
+	// 	// position: relative;
+	// 	justify-content: center;
+	// 	align-items: flex-end;
+	// 	border-bottom: solid 1px rgba(255,255,255,.4);
+	// 	margin-top: 150px;
+	// 	margin-bottom: 50px;
+	// 	padding-bottom: 1.2rem;
+	// 	padding: 1.2rem;
 
-		.logo-wrap{
-			height: 8rem;
-			position: absolute;
-			right: 10px;
-			svg{
-				height: 100%;
-				*{
-					fill: rgba(255,255,255,.1);
-				}
-			}
-		}
-	}
-	.overlay-box{
-		height: 5rem;
-	}
-	.gallery-projects{
-		padding: 5px;
-		img{
-			height: 100%; 
-			width: 100%;
-			object-fit: cover;
-		}
-	}
-	.project-details{
-		padding: 4rem 8rem;
-		border-left: solid 1px rgba(255,255,255,.8);
-		border-right: solid 1px rgba(255,255,255,.8);
-	}
+	// 	.title-inner-wrap{
+	// 		display: flex;
+	// 		justify-content: space-between;
+	// 		align-items: flex-end;
+	// 		padding: 0 5rem;
+	// 		width: 950px; 
+	// 	}
 
-	.project-link{
-		margin-top: 4rem;
-		a{
-			letter-spacing: .1rem;
-			display: flex;
-			align-items: center;
-			width: 30em;
-			transition: .2s;
-			span{
-				font-size: 2.2rem;
-				margin: 0 2rem;
-			}
-		}
-		.line-left{
-			width: 3rem;
-		}
-		.line-right{
-			width: 6rem;
-		}
-		div{
-			height: 1px;
-			background: rgba(255,255,255,.6);
-			// margin: 2rem;
-			transition: .2s;
-		}
-		&:hover{
-			.line-right{
-				flex-grow: 1;
-			}
-		}
-	}
+	// 	.logo-wrap{
+	// 		height: 8rem;
+	// 		// position: absolute;
+	// 		// right: 10px;
+	// 		svg{
+	// 			height: 100%;
+	// 			*{
+	// 				fill: rgba(255,255,255,.1);
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// .overlay-box{
+	// 	height: 5rem;
+	// }
+	// .gallery-projects{
+	// 	padding: 5px;
+	// 	img{
+	// 		height: 100%; 
+	// 		width: 100%;
+	// 		object-fit: cover;
+	// 	}
+	// }
+	// .project-details{
+	// 	padding: 4rem 8rem;
+	// 	// border-left: solid 1px rgba(255,255,255,.8);
+	// 	// border-right: solid 1px rgba(255,255,255,.8);
+	// }
+
+	// .project-link{
+	// 	margin-top: 4rem;
+	// 	a{
+	// 		letter-spacing: .1rem;
+	// 		display: flex;
+	// 		align-items: center;
+	// 		width: 30em;
+	// 		transition: .2s;
+	// 		span{
+	// 			font-size: 2.2rem;
+	// 			margin: 0 2rem;
+	// 		}
+	// 	}
+	// 	.line-left{
+	// 		width: 3rem;
+	// 	}
+	// 	.line-right{
+	// 		width: 6rem;
+	// 	}
+	// 	div{
+	// 		height: 1px;
+	// 		background: rgba(255,255,255,.6);
+	// 		// margin: 2rem;
+	// 		transition: .2s;
+	// 	}
+	// 	&:hover{
+	// 		.line-right{
+	// 			flex-grow: 1;
+	// 		}
+	// 	}
+	// }
 }
