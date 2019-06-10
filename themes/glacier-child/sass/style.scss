@@ -362,8 +362,11 @@ nav{
 }
 //FOOTER STYLES
 footer{
+	position: absolute;
+	width: 100%;
 	margin-top: 12rem;
-	margin-bottom: 1rem;
+	padding: 2rem 1rem;
+	box-shadow: 0 -10px 50px rgba(0,0,0,.4);
 }
 .footer-inner{
 	display: flex;
@@ -398,15 +401,37 @@ footer{
 
 
 //UNIVERSAL CONTENT
+p{
+	text-align: justify;
+	@media only screen and (min-width: $screen__tablet-width){
+		text-align: left;
+	}
+}
+
 #wrapper>.container>.row{
 }
 h1.entry-header{
+	position: relative;
 	text-align: center;
 	letter-spacing: .2em;
 	padding-bottom: 3rem;
 	text-transform: uppercase;
 	margin-top: 100px;
 	margin-bottom: 100px;
+	border-bottom: solid 1px rgba(255,255,255,.1);
+	&::before{
+		position: absolute;
+		display: block;
+		height: 100%;
+		width: 100%;
+		content: '';
+		// background: green;
+		// border-bottom: solid 10px black;
+		// border-radius: 50%;
+		// box-shadow: 0 10px 10px rgba(0,0,0,.4);
+		
+	}
+
 
 }
 .content-wrap{
@@ -417,6 +442,13 @@ h1.entry-header{
 
 a:hover{
 	text-decoration: none;
+}
+
+.vp-portfolio{
+	@media only screen and (min-width: $screen__tablet-width){
+		width: 80%;
+		margin: auto;
+	}
 }
 
 .vp-id-1998 .vp-portfolio__items-style-fly .vp-portfolio__item-overlay,
@@ -501,7 +533,6 @@ body{
 
 	.contact-row p{
 		margin-bottom: 0;
-
 	}
 	.contact-image {
 		text-align: right;
@@ -513,11 +544,30 @@ body{
 	.bio-wrap{
 		padding: 0 1.4rem;
 	}
+	.contact-row{
+		// border-bottom: solid 1px rgba(255,255,255,.1);
+	}
+	.address-row{
+
+	}
+
 	.address-row,
 	.contact-row{
 		// margin-left: 25px;
 		border-top: solid 1px rgba(255,255,255,.1);
 		padding: 2rem 1rem;
+
+		.wpb_wrapper{
+			@media only screen and (max-width: $screen__tablet-width){
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: .5rem;
+				*{
+					text-align: center;
+				}
+			}
+		}
 
 		.wpb_content_element{
 			margin-bottom: 0;
@@ -528,6 +578,7 @@ body{
 	}
 	h4{
 		font-size: 2.2rem;
+		// border-bottom: 1px solid rgba(255,255,255,.01);
 		// opacity: .8;
 	}
 

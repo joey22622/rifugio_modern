@@ -10,9 +10,9 @@
 <?php get_header(); ?>
 
 <div class="container">
-  <div class="row d-flex justify-content-center">
+  <div class="row main-content-wrap">
   
-	<div class="col-md-10 offset-md-1 content-wrap">
+	<div class="col-md-10 col-md-offset-1">
 
 			<?php
 				if(is_front_page()):
@@ -25,9 +25,8 @@
       			<?php echo $logo ?>
         	</div>
       		<!-- logo-wrap -->
-
-</div>
-<!-- /.home-logo-wrap -->
+		</div>
+		<!-- /.home-logo-wrap -->
 				
 			<?php
 				else:

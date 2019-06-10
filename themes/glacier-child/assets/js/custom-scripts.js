@@ -9,10 +9,17 @@ var windowActive = true;
 var html = document.querySelector("html");
 var htmlInTimeout;
 var anchor = $("#glacier_menu .has-sub>a");
+var aboutPage = "page-id-2091";
 
 anchor.click(function(e){
     e.preventDefault();
 });
+
+// $(window).load(function(){
+//     if($("body").hasClass(aboutPage)){
+//         $(".main-content-wrap>div").attr("class" , "col-md-10 col-md-offset-1")
+//     }
+// });
 
 console.log(nav);
 $(window).on("scroll", function(){
