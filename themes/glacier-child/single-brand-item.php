@@ -28,9 +28,9 @@ get_header();
 
 <script>
 
-var url = document.querySelector(".parent-brand-link").value;
-console.log(url);
-window.location.replace(document.querySelector(".parent-brand-link").value);
+// var url = document.querySelector(".parent-brand-link").value;
+// console.log(url);
+// window.location.replace(document.querySelector(".parent-brand-link").value);
 
 </script>
 <?php
