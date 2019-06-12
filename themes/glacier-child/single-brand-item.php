@@ -4,8 +4,15 @@
 /* ======================= */
 
 get_header(); 
+$url = "https://www.google.com/";
+wp_redirect($url);
+exit;
+
 
 ?>
+
+
+
 
 <div class="container">
   <div class="row">

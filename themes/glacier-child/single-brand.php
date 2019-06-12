@@ -6,7 +6,12 @@
 
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); 
+
+$url = "https://www.google.com/";
+wp_redirect($url);
+exit;
+?>
 
 <?php if ( class_exists('acf') ) : ?>
 
