@@ -13,6 +13,30 @@
 	<?php
 	// vars ( ACF )
 	$images = get_field('gallery_projects');
+	$multiImg = true;
+	$column = array(
+		"page"				=> "multi-photo",
+		"gallery" 			=> "col-md-12",
+		"details" 			=> "col-md-12",
+		"photo" 			=> "col-md-4",
+		"detail-label" 		=> "col-md-2",
+		"detail-content" 	=> "col-md-10"
+		
+
+	);
+	if(count($images) <= 1):
+		$multiImg = false;
+		$column = array(
+			"page"				=> "single-photo",
+			"gallery" 			=> "col-md-5",
+			"details" 			=> "col-md-7",
+			"photo" 			=> "col-md-11",
+			"detail-label" 		=> "col-md-4",
+			"detail-content" 	=> "col-md-8"
+	
+		);
+	endif;
+
 	$logo = get_field('brand_logo');
 	$website = get_field('brand_link');
 	$visible = get_field('visible_details');
@@ -21,7 +45,7 @@
 	$project_location = get_field('project_location');
 	?>
 
-    <div class="container">
+    <div class="container <?php echo $column["page"]?>">
     	<div class="row">
 			<div class="col-md-12">
 				<div class="container">
@@ -42,9 +66,10 @@
 
 				<div class="row content-wrap">
 	<?php if ( $images ) : ?> 
+				<div class="<?php echo $column["gallery"] ?>">
 				<div class="row">
 		<?php foreach ( $images as $image ) : ?>
-					<div class="col-md-4 gallery-projects <?php echo esc_html($column_single); ?>">
+					<div class="<?php echo $column['photo'] ?> gallery-projects <?php echo esc_html($column_single); ?>">
 						<a href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['title']); ?>" class="showcase" data-rel="lightcase:gallery">
 								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_html($image['alt']); ?>">
 						</a>
@@ -53,14 +78,16 @@
 		<?php endforeach; ?>
 				</div>
 				<!-- /.row -->
+				</div>
+				<!-- /.col-md-12 -->
+
 
 
 	<?php endif; ?>
 
 
 						
-				<div class="row project-details">
-					<div class="col-md-12">
+				<div class="<?php echo $column['details'] ?> project-details">
 <?php 
 
 				while ( have_posts() ) : the_post(); 
@@ -79,15 +106,15 @@
 							if($rowCount > 1): $brandLabel = "Brands"; endif;
 						?>
 							<div class="row">
-								<div class="col-md-3 detail-label">
+								<div class="col-md-2 detail-label">
 									<span><?php echo $brandLabel ?></span>
 								</div>
 				<!-- /.col-md.3 detail-label -->
-								<div class="col-md-9 detail-content">
+								<div class="col-md-10 detail-content">
 									<p class="project-brands">
 							<?php
 							$i = 1;
-							$commaSpace = ", ";
+							$commaSpace = "<span class='divider'> | </span>";
 							 while ( have_rows('project_brands') ) : the_row();
 								 $post_object = get_sub_field('brand');
 									 if($i >= $rowCount):
@@ -97,7 +124,8 @@
 										$post = $post_object;
 										setup_postdata( $post );
 								?>
-										<a href="<?php the_permalink()?>"><?php echo  get_the_title(); echo $commaSpace; ?></a>
+										<a href="<?php the_permalink()?>"><?php echo  get_the_title();?></a>
+										<?php echo $commaSpace; ?>
 								<?php						
 								wp_reset_postdata();
 								endif;
@@ -110,14 +138,32 @@
 								<!-- /.col-md-9 detail-content -->
 							</div>
 							<!-- /.row -->
-						<?php
-						endif;
-						?>							
+							<?php
+							endif;
 
+							if($project_location):
+							?>	
+							<div class="row">
+								<div class="<?php echo $column["detail-label"]?> detail-label">
+									<span>Location</span>
+								</div>
+								<!-- /.col-md-3 detail-label -->
+								<div class="<?php echo $column["detail-content"]?> detail-content">
+									<p><?php echo $project_location ?></p>
+								</div>
+								<!-- /.col-md-9 detail-content -->
+							</div>
+							<!-- /.row -->	
+							<?php
+							endif;
+							?>				
+							</div>
+							<!-- /.col-md-12.project-points -->
 						</div>
-						<!-- /.col-md-12 -->
-					</div>
-					<!-- /.row.project-details -->
+						<!-- /.row -->								
+
+				</div>
+				<!-- /.col-md-12.project-details -->
 				</div>
 				<!-- /.row .content-wrap -->
 				</div>

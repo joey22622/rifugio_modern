@@ -110,7 +110,12 @@ Tags: custom-background, two-columns, right-sidebar, custom-menu, editor-style, 
 // 	--GOOGLE MAPS STYLES
 // 	--ABOUT PAGE
 // 	--BRAND PAGE
+//	--SINGLE PORTFOLIO
 
+//RESETS
+a{
+	outline: none;
+}
 
 //HEADER STYLES
 
@@ -524,6 +529,11 @@ body{
 
 // ABOUT PAGE
 // page-id-2091
+.gm-style-pbt{
+	//aligns google maps overlay text
+	text-align: center;
+}
+
 .page-id-2091 .content-wrap{
 	max-width: 1100px;
 	padding: 25px 0;
@@ -584,10 +594,37 @@ body{
 
 }
 
-.single-brand{
+.single-brand,
+.single-portfolio{
+	.single-photo{
+		.post-title-row .title-inner-wrap{
+			@media only screen and(min-width: $screen__tablet-width){
+			width: 1050px;
+			}
+		}
+		.content-wrap{
+			max-width: 1050px;
+
+			@media only screen and(min-width: $screen__tablet-width){
+				display: flex;
+				align-items: stretch;
+			}
+		}
+		.project-details{
+			@media only screen and(min-width: $screen__tablet-width){
+				margin-top: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+	}
+
 	h1{
 		letter-spacing: .1em;
-		line-height: .6em;
+		line-height: 1em;
 		margin: 0;
 
 		border-bottom: none;
@@ -603,8 +640,8 @@ body{
 		border-bottom: solid 1px rgba(255,255,255,.4);
 		margin-top: 150px;
 		margin-bottom: 50px;
-		padding-bottom: 1.2rem;
 		padding: 1.2rem;
+		padding-bottom: 2rem;
 
 		.title-inner-wrap{
 			display: flex;
@@ -647,9 +684,12 @@ body{
 	.project-details{
 		padding: 4rem 0;
 		text-align: justify;
+
 		@media only screen and(min-width: $screen__tablet-width) {
-			padding: 4rem 4rem;
-			text-align: left;
+			&>p{
+				padding: 0 4rem;
+				text-align: left;
+			}
 		}
 
 	}
@@ -724,6 +764,48 @@ body{
 				height: 100%;
 				width: 100%;
 			}
+		}
+	}
+}
+
+//SINGLE PORTFOLIO
+.single-portfolio{
+	.project-details{
+		margin-top: 2rem;
+	}
+	.project-points{
+		border-top: solid 1px rgba(255,255,255,.1);
+		// background: -moz-linear-gradient(bottom, rgba(0,0,0,.1) 0%,  rgba(0,0,0,0) 100%); /* FF3.6-15 */
+		// background: -webkit-linear-gradient(bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		// background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 ); /* IE6-9 */
+		padding-top: 3rem;
+		margin-top: 3rem;
+
+		@media only screen and(min-width: $screen__tablet-width){
+			padding-left: 5rem; 
+		}
+	}
+	.detail-content{
+		letter-spacing: 1px;
+		a{
+			color: $color__text-main;
+			&:hover{
+				color: $color__link-hover;
+			}
+		}
+		.divider{
+			color: $color__link-hover;
+			opacity: .6;
+			margin: 0 .6rem;
+		}
+	}
+	.detail-label{
+		text-transform: uppercase;
+		letter-spacing: .1em;
+		color: white;
+		span{
+			font-weight: 400;
 		}
 	}
 }
