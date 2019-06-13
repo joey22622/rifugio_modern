@@ -3,11 +3,13 @@
 /* ::::: Single Post ::::: */
 /* ======================= */
 
-get_header(); 
-$url = "https://www.google.com/";
-wp_redirect($url);
-exit;
+function redirect_custom_page() {
+	if (is_single()) {
+		wp_redirect( home_url() ); exit;
+	}
+ }
 
+get_header(); 
 
 ?>
 
@@ -18,14 +20,14 @@ exit;
   <div class="row">
   
 	<div class="col-md-9">
-			<h1>Hi there!!</h1>
+	<h1>Hi there!!<?php echo $brand_item_id . $url . $parent_brand; ?></h1>
 
 		<?php if ( have_posts() ):
 								
 				while( have_posts() ): the_post();
 					get_template_part( 'template-parts/blog/classic/content', get_post_format() );
 					
-					$parent_brand = get_field('parent_brand');
+					$parent_brand = get_field('parent_brand', $brand_item_id);
 					if($parent_brand):
 						$post = $parent_brand;
 						setup_postdata( $post );
@@ -33,17 +35,9 @@ exit;
 ?>
 <span class="parent-brand-link"><?php echo $url?></span>
 
-<script>
-
-// var url = document.querySelector(".parent-brand-link").value;
-// console.log(url);
-// window.location.replace(document.querySelector(".parent-brand-link").value);
-
-</script>
 <?php
 										wp_reset_postdata();
 										endif;
-					wp_redirect( home_url() ); exit;
 
 					echo glacier_post_navigation();
 									

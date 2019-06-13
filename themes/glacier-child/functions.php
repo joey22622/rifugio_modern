@@ -109,7 +109,7 @@ function custom_post_type() {
 	register_post_type('brand-item',$brand_item_args);
 }
 
-add_action('init',custom_post_type);
+add_action('init', 'custom_post_type');
 
 function my_rewrite_flush() {
 
@@ -119,7 +119,28 @@ function my_rewrite_flush() {
 }
 register_activation_hook( __FILE__, 'my_rewrite_flush' );
 
+add_action('wp', 'myfun');
+ function myfun(){ 
+	 global $test;
+	 $test = "alsdkfjalsdkfjasdf";
+    if('brand-itsem' == get_post_type()){ 
+		while ( have_posts() ) : the_post(); 
+		global $brand_item_id;
+		$brand_item_id = get_the_ID();
+		global $parent_brand;
+		$parent_brand = get_field('parent_brand', $brand_item_id);
+		if($parent_brand):
+			$post = $parent_brand;
+			setup_postdata( $post );
+			global $url;
+			$url =  the_permalink();
+			wp_redirect($url); exit;  
+			wp_reset_postdata();
+			endif;
+		endwhile;
 
+	}
+  }
 
 add_action( 'wp_enqueue_scripts', 'glacier_child_enqueue_styles');
 add_action( 'wp_enqueue_scripts', 'glacier_child_enqueue_scripts' );
