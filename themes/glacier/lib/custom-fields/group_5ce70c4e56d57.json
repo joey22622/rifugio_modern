@@ -130,6 +130,13 @@
                 "operator": "==",
                 "value": "brand"
             }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "brand"
+            }
         ]
     ],
     "menu_order": 0,
@@ -140,5 +147,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558650133
+    "modified": 1560467303
 }

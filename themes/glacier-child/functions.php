@@ -109,38 +109,80 @@ function custom_post_type() {
 	register_post_type('brand-item',$brand_item_args);
 }
 
+function custom_taxonomies(){
+
+	$labels = array(
+		'name' 				=> 'Brands',
+		'singular_name' 	=> 'Brand',
+		'all_items' 		=> 'All Brands',
+		'parent_items' 		=> 'Parent Brand',
+		'parent_item_colon'	=> 'Parent Brand:',
+		'edit_item' 		=> 'Edit Brand',
+		'update_item' 		=> 'Update Brand',
+		'add_new_item' 		=> 'Add New Brand',
+		'new_item_name' 	=> 'New Brand Name',
+		'menu_name' 		=> 'Brands'
+	);
+// 	$args = array(
+// 		'hierarchical'      => true,
+// 		'labels'            => $labels,
+// 		'show_ui'           => true,
+// 		'show_admin_column' => true,
+// 		'query_var'         => true,
+// 		'has_archive'		=> true
+// 		// 'rewrite'           => array( 'slug' => 'brand' ),
+// 	);
+
+// 	register_taxonomy('brand', array('brand-item'), $args);
+
+	// register_taxonomy('software', array('brand-item'), array(
+	// 	'label' => 'Software',
+	// 	'rewrite' => array('slug' => 'software'),
+	// 	'hierarchical' => false
+	// ));
+
+		// Add new taxonomy, make it hierarchical (like categories)
+		$labels = array(
+			'name'              => _x( 'Genres', 'taxonomy general name', 'textdomain' ),
+			'singular_name'     => _x( 'Genre', 'taxonomy singular name', 'textdomain' ),
+			'search_items'      => __( 'Search Genres', 'textdomain' ),
+			'all_items'         => __( 'All Genres', 'textdomain' ),
+			'parent_item'       => __( 'Parent Genre', 'textdomain' ),
+			'parent_item_colon' => __( 'Parent Genre:', 'textdomain' ),
+			'edit_item'         => __( 'Edit Genre', 'textdomain' ),
+			'update_item'       => __( 'Update Genre', 'textdomain' ),
+			'add_new_item'      => __( 'Add New Genre', 'textdomain' ),
+			'new_item_name'     => __( 'New Genre Name', 'textdomain' ),
+			'menu_name'         => __( 'Genre', 'textdomain' ),
+		);
+	
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'genre' ),
+		);
+	
+		register_taxonomy( 'genre', array( 'page' ), $args );
+
+}
+
+
+
+add_action('init', 'custom_taxonomies');
 add_action('init', 'custom_post_type');
 
 function my_rewrite_flush() {
 
 	custom_post_type();
+	custom_taxonomies();
 	
     flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'my_rewrite_flush' );
 
-// add_action('wp', 'myfun');
-//  function myfun(){ 
-// 	 global $test;
-// 	 $test = "alsdkfjalsdkfjasdf";
-//     if('brand-itsem' == get_post_type()){ 
-// 		while ( have_posts() ) : the_post(); 
-// 		global $brand_item_id;
-// 		$brand_item_id = get_the_ID();
-// 		global $parent_brand;
-// 		$parent_brand = get_field('parent_brand', $brand_item_id);
-// 		if($parent_brand):
-// 			$post = $parent_brand;
-// 			setup_postdata( $post );
-// 			global $url;
-// 			$url =  the_permalink();
-// 			wp_redirect($url); exit;  
-// 			wp_reset_postdata();
-// 			endif;
-// 		endwhile;
-
-// 	}
-//   }
 
 add_action( 'wp_enqueue_scripts', 'glacier_child_enqueue_styles');
 add_action( 'wp_enqueue_scripts', 'glacier_child_enqueue_scripts' );
