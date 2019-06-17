@@ -185,6 +185,23 @@ function custom_taxonomies(){
 add_action('init', 'custom_taxonomies');
 add_action('init', 'custom_post_type');
 
+
+add_action('wp', 'myfun');
+ function myfun(){ 
+	 global $termlink;
+	 if('brand-item' == get_post_type()){ 
+		if(is_single()):
+			$terms = get_terms( 'brand' );
+			$term = array_pop($terms);
+			$termlink = get_category_link( $term->term_id);
+			// $termlink = "https://stackoverflow.com/questions/42476391/get-terms-in-functions-php";
+		wp_redirect($termlink); exit;
+	//  $test = "alsdkfjalsdkfjasdf";
+		endif;
+	 }
+  }
+
+
 function my_rewrite_flush() {
 
 	custom_post_type();

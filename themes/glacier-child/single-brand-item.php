@@ -2,19 +2,35 @@
 /* ======================= */
 /* ::::: Single Post ::::: */
 /* ======================= */
-
-function redirect_custom_page() {
-	if (is_single()) {
-		wp_redirect( home_url() ); exit;
-	}
- }
-
+// $terms = get_terms( 'brand' );
+// $term = array_pop($terms);
+// $termlink = get_category_link( $term->term_id);
+// $termlink = "https://www.google.com";
+// function redirect_custom_page() {
+// 	if (is_single()) {
+// 		wp_redirect($termlink); exit;
+// 	}
+//  }
+//  redirect_custom_page();
 get_header(); 
 
+
+// if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+
+// for ($x = 0; $x <= 1; $x++) {
+// } 
+
+
+
+			// $terms = get_terms( 'brand' );
+			// if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+			// 	echo '<ul>';
+			// 	foreach ( $terms as $term ) {
+			// 		echo '<li><a href="'. get_category_link( $term->term_id ) .'">' . $term->name . '</a></li>';
+			// 	}
+			// 	echo '</ul>';
+			// }
 ?>
-
-
-
 
 <div class="container">
   <div class="row">
@@ -32,9 +48,15 @@ get_header();
 						$post = $parent_brand;
 						setup_postdata( $post );
 						$url =  the_permalink();
-?>
+			?>
 <span class="parent-brand-link"><?php echo $url?></span>
+<?php 
+									echo '<ul>';
+										echo '<li><a href="'. get_category_link( $term->term_id ) .'">' . $termlink . 'ss</a></li>';
 
+									echo '</ul>';
+								
+								?>
 <?php
 										wp_reset_postdata();
 										endif;
