@@ -129,6 +129,34 @@ $(".hamburger").on("click", function(){
     }
 
 });
+
+//reveals/hides header logo at certain point
+//targetPoint is the scrollTop value where the function toggles
+//runs on page load and page scroll
+var headLogoHide;
+//point plugs in as only param to logoToggle function
+var point = 100;
+function logoToggle(targetPoint){
+    var pageLocation = $(window).scrollTop();
+    console.log(pageLocation)
+    if(pageLocation <= targetPoint && !headLogoHide){
+        $(".logo-gradient").addClass("logo-hidden");
+        headLogoHide = true;
+    } else if (pageLocation > targetPoint && headLogoHide) {
+        $(".logo-gradient").removeClass("logo-hidden");   
+        headLogoHide = false;
+    }
+}
+if($("body").hasClass("home")){
+    logoToggle(point);
+}
+window.addEventListener("scroll", function(){
+    if($("body").hasClass("home")){
+        logoToggle(point);
+    }
+});
+
+
 function watchForHover() {
     var hasHoverClass = false;
     var container = document.body;
