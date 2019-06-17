@@ -2,15 +2,15 @@
 /* ======================= */
 /* ::::: Single Post ::::: */
 /* ======================= */
-// $terms = get_terms( 'brand' );
-// $term = array_pop($terms);
-// $termlink = get_category_link( $term->term_id);
-// $termlink = "https://www.google.com";
-// function redirect_custom_page() {
-// 	if (is_single()) {
-// 		wp_redirect($termlink); exit;
-// 	}
-//  }
+$terms = get_terms( 'brand' );
+$term = array_pop($terms);
+$termlink = get_category_link( $term->term_id);
+$termlink = "https://www.google.com";
+function redirect_custom_page() {
+	if (is_single()) {
+		wp_redirect($termlink); exit;
+	}
+ }
 //  redirect_custom_page();
 get_header(); 
 
