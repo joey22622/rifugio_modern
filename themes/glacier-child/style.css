@@ -1406,19 +1406,19 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .single-photo .post-title-row .title-inner-wrap,
+	.tax-brand .single-photo .post-title-row .title-inner-wrap,
 	.single-portfolio .single-photo .post-title-row .title-inner-wrap {
 		width: 1050px;
 	}
 }
 
-.single-brand .single-photo .content-wrap,
+.tax-brand .single-photo .content-wrap,
 .single-portfolio .single-photo .content-wrap {
 	max-width: 1050px;
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .single-photo .content-wrap,
+	.tax-brand .single-photo .content-wrap,
 	.single-portfolio .single-photo .content-wrap {
 		display: -ms-flexbox;
 		display: flex;
@@ -1428,7 +1428,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .single-photo .project-details,
+	.tax-brand .single-photo .project-details,
 	.single-portfolio .single-photo .project-details {
 		margin-top: 0;
 		padding-top: 0;
@@ -1442,7 +1442,7 @@ body {
 	}
 }
 
-.single-brand h1,
+.tax-brand h1,
 .single-portfolio h1 {
 	letter-spacing: .1em;
 	line-height: 1em;
@@ -1450,12 +1450,12 @@ body {
 	border-bottom: none;
 }
 
-.single-brand .content-wrap,
+.tax-brand .content-wrap,
 .single-portfolio .content-wrap {
 	max-width: 950px;
 }
 
-.single-brand .post-title-row,
+.tax-brand .post-title-row,
 .single-portfolio .post-title-row {
 	display: -ms-flexbox;
 	display: flex;
@@ -1470,7 +1470,7 @@ body {
 	padding-bottom: 2rem;
 }
 
-.single-brand .post-title-row .title-inner-wrap,
+.tax-brand .post-title-row .title-inner-wrap,
 .single-portfolio .post-title-row .title-inner-wrap {
 	display: -ms-flexbox;
 	display: flex;
@@ -1483,7 +1483,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .post-title-row .title-inner-wrap,
+	.tax-brand .post-title-row .title-inner-wrap,
 	.single-portfolio .post-title-row .title-inner-wrap {
 		width: 950px;
 		-ms-flex-pack: justify;
@@ -1491,40 +1491,40 @@ body {
 	}
 }
 
-.single-brand .post-title-row .logo-wrap,
+.tax-brand .post-title-row .logo-wrap,
 .single-portfolio .post-title-row .logo-wrap {
 	display: none;
 	height: 8rem;
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .post-title-row .logo-wrap,
+	.tax-brand .post-title-row .logo-wrap,
 	.single-portfolio .post-title-row .logo-wrap {
 		display: block;
 	}
 }
 
-.single-brand .post-title-row .logo-wrap svg,
+.tax-brand .post-title-row .logo-wrap svg,
 .single-portfolio .post-title-row .logo-wrap svg {
 	height: 100%;
 }
 
-.single-brand .post-title-row .logo-wrap svg *,
+.tax-brand .post-title-row .logo-wrap svg *,
 .single-portfolio .post-title-row .logo-wrap svg * {
 	fill: rgba(255, 255, 255, 0.1);
 }
 
-.single-brand .overlay-box,
+.tax-brand .overlay-box,
 .single-portfolio .overlay-box {
 	height: 5rem;
 }
 
-.single-brand .gallery-projects,
+.tax-brand .gallery-projects,
 .single-portfolio .gallery-projects {
 	padding: 5px;
 }
 
-.single-brand .gallery-projects img,
+.tax-brand .gallery-projects img,
 .single-portfolio .gallery-projects img {
 	height: 100%;
 	width: 100%;
@@ -1532,26 +1532,33 @@ body {
 	   object-fit: cover;
 }
 
-.single-brand .project-details,
+.tax-brand .project-details,
 .single-portfolio .project-details {
 	padding: 4rem 0;
 	text-align: justify;
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .project-details > p,
+	.tax-brand .project-details > p,
 	.single-portfolio .project-details > p {
 		padding: 0 4rem;
 		text-align: left;
 	}
 }
 
-.single-brand .project-link,
+.tax-brand .project-link,
 .single-portfolio .project-link {
 	margin-top: 4rem;
 }
 
-.single-brand .project-link a,
+@media only screen and (min-width: 768px) {
+	.tax-brand .project-link,
+	.single-portfolio .project-link {
+		padding: 0 4rem;
+	}
+}
+
+.tax-brand .project-link a,
 .single-portfolio .project-link a {
 	letter-spacing: .1rem;
 	display: -ms-flexbox;
@@ -1563,26 +1570,26 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .project-link a,
+	.tax-brand .project-link a,
 	.single-portfolio .project-link a {
 		width: 30em;
 	}
 }
 
-.single-brand .project-link a span,
+.tax-brand .project-link a span,
 .single-portfolio .project-link a span {
 	font-size: 2.2rem;
 	margin: 0 2rem;
 }
 
-.single-brand .project-link .line-left,
+.tax-brand .project-link .line-left,
 .single-portfolio .project-link .line-left {
 	-ms-flex-positive: 1;
 	    flex-grow: 1;
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .project-link .line-left,
+	.tax-brand .project-link .line-left,
 	.single-portfolio .project-link .line-left {
 		width: 3rem;
 		-ms-flex-positive: unset;
@@ -1590,14 +1597,14 @@ body {
 	}
 }
 
-.single-brand .project-link .line-right,
+.tax-brand .project-link .line-right,
 .single-portfolio .project-link .line-right {
 	-ms-flex-positive: 1;
 	    flex-grow: 1;
 }
 
 @media only screen and (min-width: 768px) {
-	.single-brand .project-link .line-right,
+	.tax-brand .project-link .line-right,
 	.single-portfolio .project-link .line-right {
 		width: 8rem;
 		-ms-flex-positive: unset;
@@ -1605,14 +1612,14 @@ body {
 	}
 }
 
-.single-brand .project-link div,
+.tax-brand .project-link div,
 .single-portfolio .project-link div {
 	height: 1px;
 	background: rgba(255, 255, 255, 0.6);
 	transition: .2s;
 }
 
-.single-brand .project-link:hover .line-right,
+.tax-brand .project-link:hover .line-right,
 .single-portfolio .project-link:hover .line-right {
 	-ms-flex-positive: 1;
 	    flex-grow: 1;

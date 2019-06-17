@@ -1,3 +1,4 @@
+
 <?php
 
  /*
@@ -44,6 +45,8 @@
 	$variants = "three";
 	$project_title = get_field('project_details');
 	$project_location = get_field('project_location');
+	$term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+
 	?>
 
     <div class="container <?php echo $column["page"]?>">
@@ -52,7 +55,7 @@
 				<div class="container">
 				<div  class="row post-title-row">
 					<div class="col-md-12 title-inner-wrap">
-						<h1><?php echo get_the_title(); ?></h1>
+						<h1><?php echo $term->name;?></h1>
 	
 	<?php if($logo): ?>
 
@@ -88,14 +91,7 @@
 
 						
 					<div class="<?php echo $column['details'] ?> project-details">
-<?php 
-
-				while ( have_posts() ) : the_post(); 
-
-					the_content(); 
-					
-				endwhile;
-				 ?> 
+<?php echo term_description(); ?> 
 						<div class="row">
 							<div class="col-12-md project-link">
 								<a href="<?php echo $website ?>" class="brand-website" target="_blank">

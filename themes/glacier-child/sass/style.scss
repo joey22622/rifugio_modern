@@ -594,7 +594,7 @@ body{
 
 }
 
-.single-brand,
+.tax-brand,
 .single-portfolio{
 	.single-photo{
 		.post-title-row .title-inner-wrap{
@@ -696,6 +696,9 @@ body{
 
 	.project-link{
 		margin-top: 4rem;
+		@media only screen and(min-width: $screen__tablet-width){
+			padding: 0 4rem;
+		}
 		a{
 			letter-spacing: .1rem;
 			display: flex;
