@@ -1317,8 +1317,8 @@ body {
 	    align-items: center;
 }
 
-.home-logo-wrap .logo-back-wrap {
-	z-index: -1;
+.home-logo-wrap .logo-text-wrap {
+	z-index: 1;
 }
 
 .home-logo-wrap svg {
@@ -1329,10 +1329,25 @@ body {
 	fill: white;
 }
 
+.home-logo-wrap .logo-back-wrap svg * {
+	fill: #f8981d;
+}
+
+.home-logo-wrap .logo-back-wrap.logo-hidden {
+	opacity: 0;
+}
+
 .home-logo-wrap .logo-back-fade {
+	position: relative;
 	height: 100%;
 	width: 100%;
-	background: green;
+	/* FF3.6-15 */
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to top, #1e2326 0%, #1e2326 82%, rgba(30, 35, 38, 0) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 );
+	/* IE6-9 */
+	margin-top: 70%;
 }
 
 .vp-filter__style-default .vp-filter__item a {

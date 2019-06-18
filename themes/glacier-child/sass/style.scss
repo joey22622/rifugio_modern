@@ -500,8 +500,8 @@ body{
 		justify-content: center;
 		align-items: center;
 	}
-	.logo-back-wrap{
-		z-index: -1;
+	.logo-text-wrap{
+		z-index: 1;
 	}
 	svg{
 		height: 100%;
@@ -510,10 +510,25 @@ body{
 		}
 	}
 
+	.logo-back-wrap{
+		svg *{
+			fill: $color__link-hover;
+		}
+		&.logo-hidden{
+			opacity: 0;
+		}
+	}
+
 	.logo-back-fade{
+		position: relative;
 		height: 100%;
 		width: 100%;
-		background: green;
+		background: -moz-linear-gradient(bottom, rgba(30,35,38,1) 0%, rgba(30,35,38,1) 82%,  rgba(30,35,38,0) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(bottom, rgba(30,35,38,1) 0%, rgba(30,35,38,1) 82%, rgba(30,35,38,0) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to top, rgba(30,35,38,1) 0%, rgba(30,35,38,1) 82%, rgba(30,35,38,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 ); /* IE6-9 */
+
+		margin-top: 70%;
 	}
 }
 

@@ -102,6 +102,9 @@ html.addEventListener("mouseenter", function(){
         }
     }      
 });
+
+
+
 function toggleSubMenu(){
     //checks if screen hasHover.. if so:
         //checks if subMenu has class
@@ -130,6 +133,35 @@ $(".hamburger").on("click", function(){
 
 });
 
+
+//handles fade of logo-text layer, hides background layer
+var fadePoint = 180;
+function homeLogoFade(fadePoint){
+    var vanishPoint = fadePoint + 50;
+    var pageLocation = $(window).scrollTop();
+    //changes opacity if scrollTop is between fade & vanish points
+    if(pageLocation >= fadePoint  && pageLocation < vanishPoint){
+        var ratio1 = pageLocation - fadePoint;
+        var ratio2 = vanishPoint - fadePoint;
+        var ratio = parseFloat(1-(ratio1/ratio2));
+        console.log(ratio1 + " / " +ratio2 + " = " + ratio);
+        $(".logo-text-wrap").css("opacity", ratio);
+    } else if (pageLocation >= vanishPoint){
+        $(".logo-text-wrap").css("opacity", 0);
+    } else if (pageLocation < fadePoint){
+        $(".logo-text-wrap").css("opacity", 1);
+    }
+    vanishPoint = vanishPoint+100;
+    if(pageLocation >= fadePoint  && pageLocation < vanishPoint){
+        $(".logo-back-wrap").removeClass("logo-hidden");
+    } else if (pageLocation >= vanishPoint){
+        $(".logo-back-wrap").addClass("logo-hidden");
+    } else if (pageLocation < fadePoint){
+        $(".logo-back-wrap").removeClass("logo-hidden");
+    }
+    console.log(pageLocation)
+}
+
 //reveals/hides header logo at certain point
 //targetPoint is the scrollTop value where the function toggles
 //runs on page load and page scroll
@@ -139,7 +171,6 @@ var pageLoad = true;
 var point = 100;
 function logoToggle(targetPoint){
     var pageLocation = $(window).scrollTop();
-    console.log(pageLocation)
     if(pageLocation <= targetPoint && !headLogoHide){
         $(".logo-gradient").addClass("logo-hidden");
         headLogoHide = true;
@@ -155,6 +186,7 @@ if($("body").hasClass("home")){
 window.addEventListener("scroll", function(){
     if($("body").hasClass("home")){
         logoToggle(point);
+        homeLogoFade(fadePoint);
     }
 });
 
