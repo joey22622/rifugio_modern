@@ -496,14 +496,24 @@ body{
 		height: 300px;
 		width: 300px;
 		display: flex;
+		position: fixed;
 		justify-content: center;
 		align-items: center;
+	}
+	.logo-back-wrap{
+		z-index: -1;
 	}
 	svg{
 		height: 100%;
 		*{
 			fill: white;
 		}
+	}
+
+	.logo-back-fade{
+		height: 100%;
+		width: 100%;
+		background: green;
 	}
 }
 

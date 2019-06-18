@@ -1310,10 +1310,15 @@ body {
 	width: 300px;
 	display: -ms-flexbox;
 	display: flex;
+	position: fixed;
 	-ms-flex-pack: center;
 	    justify-content: center;
 	-ms-flex-align: center;
 	    align-items: center;
+}
+
+.home-logo-wrap .logo-back-wrap {
+	z-index: -1;
 }
 
 .home-logo-wrap svg {
@@ -1322,6 +1327,12 @@ body {
 
 .home-logo-wrap svg * {
 	fill: white;
+}
+
+.home-logo-wrap .logo-back-fade {
+	height: 100%;
+	width: 100%;
+	background: green;
 }
 
 .vp-filter__style-default .vp-filter__item a {

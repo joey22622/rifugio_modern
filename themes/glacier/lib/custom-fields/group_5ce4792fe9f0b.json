@@ -108,10 +108,29 @@
         },
         {
             "key": "field_5ced8a34762e2",
-            "label": "Homepage Logo",
-            "name": "home_logo",
+            "label": "Homepage Logo: Text Layer",
+            "name": "home_logo_text",
             "type": "textarea",
-            "instructions": "SVG format required",
+            "instructions": "SVG format required, foreground layer will fade out last on scroll",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d083341a71a8",
+            "label": "Homepage Logo: Background Layer",
+            "name": "home_logo_back",
+            "type": "textarea",
+            "instructions": "SVG format required, background layer will fade before text on scroll",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -143,6 +162,25 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_5d0832fea71a7",
+            "label": "",
+            "name": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -162,5 +200,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559071662
+    "modified": 1560818614
 }

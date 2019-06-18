@@ -17,13 +17,18 @@
 				if(is_front_page()):
 			?>
 		<div class="home-logo-wrap">
-<?php $logo = get_field('home_logo', 'option');
-
+<?php 
+	$logo_text = get_field('home_logo_text', 'option');
+	$logo_back = get_field('home_logo_back', 'option');
 ?>
-        	<div class="logo-wrap"> 
-      			<?php echo $logo ?>
+        	<div class="logo-wrap logo-text-wrap"> 
+      			<?php echo $logo_text ?>
         	</div>
-      		<!-- logo-wrap -->
+			<div class="logo-wrap logo-back-wrap"> 
+      			<?php echo $logo_back ?>
+        	</div>
+			  <!-- logo-wrap -->
+			<div class="logo-back-fade"></div>
 		</div>
 		<!-- /.home-logo-wrap -->
 				
