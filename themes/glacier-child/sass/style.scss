@@ -130,7 +130,7 @@ a{
 		min-width: 350px;
 		height: 5rem;
 		padding: 1.2rem 3rem;
-		transition: opacity .8s;
+		transition: opacity .1s, transform .3s;
 		background: -moz-linear-gradient(left, rgba(30,35,38,1) 0%, rgba(30,35,38,.5) 70%,  rgba(30,35,38,0) 100%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(left, rgba(30,35,38,1) 0%, rgba(30,35,38,.5) 70%, rgba(30,35,38,0) 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(to right, rgba(30,35,38,1) 0%, rgba(30,35,38,.5) 70%, rgba(30,35,38,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -139,7 +139,7 @@ a{
 		&.logo-hidden{
 			opacity: 0;
 			pointer-events: none;
-			
+			transform: translateY(-50px);
 		}
 
 		a:hover{

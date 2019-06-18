@@ -134,6 +134,7 @@ $(".hamburger").on("click", function(){
 //targetPoint is the scrollTop value where the function toggles
 //runs on page load and page scroll
 var headLogoHide;
+var pageLoad = true;
 //point plugs in as only param to logoToggle function
 var point = 100;
 function logoToggle(targetPoint){
@@ -142,10 +143,11 @@ function logoToggle(targetPoint){
     if(pageLocation <= targetPoint && !headLogoHide){
         $(".logo-gradient").addClass("logo-hidden");
         headLogoHide = true;
-    } else if (pageLocation > targetPoint && headLogoHide) {
-        $(".logo-gradient").removeClass("logo-hidden");   
+    } else if (pageLocation > targetPoint && headLogoHide || pageLocation > targetPoint && pageLoad) {
+        $(".logo-gradient").removeClass("logo-hidden");
         headLogoHide = false;
     }
+    pageLoad = false;
 }
 if($("body").hasClass("home")){
     logoToggle(point);

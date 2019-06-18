@@ -38,14 +38,19 @@
 
   <?php endif; ?>
 
-<?php endif; ?>
+<?php endif; 
+$logoHidden;
+if(is_front_page()):
+	$logoHidden = "logo-hidden";
+endif;
+?>
 
 
 <header <?php if ( true == get_theme_mod( 'header_sticky', false ) ) : ?> class="sticky" <?php endif; ?> >
   <div class="container-fluid">
     <div class="row">
       <div class="header-wrap">
-        <div class="logo-gradient">
+        <div class="logo-gradient <?php echo $logoHidden?>">
       <?php $logo = get_field('header_logo', 'option'); 
       if($logo):
        ?>

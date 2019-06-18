@@ -946,7 +946,7 @@ a {
 	min-width: 350px;
 	height: 5rem;
 	padding: 1.2rem 3rem;
-	transition: opacity .8s;
+	transition: opacity .1s, transform .3s;
 	/* FF3.6-15 */
 	/* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, #1e2326 0%, rgba(30, 35, 38, 0.5) 70%, rgba(30, 35, 38, 0) 100%);
@@ -958,6 +958,7 @@ a {
 .header-wrap .logo-gradient.logo-hidden {
 	opacity: 0;
 	pointer-events: none;
+	transform: translateY(-50px);
 }
 
 .header-wrap .logo-gradient a:hover svg * {
