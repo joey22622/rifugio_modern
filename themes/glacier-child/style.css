@@ -1424,6 +1424,11 @@ body {
 	}
 }
 
+.page-id-2091 .address-row .wpb_wrapper p,
+.page-id-2091 .contact-row .wpb_wrapper p {
+	margin-bottom: 0;
+}
+
 .page-id-2091 .address-row .wpb_content_element,
 .page-id-2091 .contact-row .wpb_content_element {
 	margin-bottom: 0;

@@ -4,7 +4,7 @@
 function initMap() {
     var denver = {lat: 39.745, lng: -104.9903};
     var rino = {lat: 39.763486, lng:-104.983158};
-    var cherryCreek = {lat: 39.716314, lng:-104.953689};
+    var cherryCreek = {lat: 39.720338, lng:-104.950666};
     var map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 12, 

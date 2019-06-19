@@ -185,6 +185,19 @@ function custom_taxonomies(){
 add_action('init', 'custom_taxonomies');
 add_action('init', 'custom_post_type');
 
+function wpse_hide_cat_descr() { ?>
+
+    <style type="text/css">
+       .term-description-wrap {
+           display: none;
+       }
+    </style>
+
+<?php } 
+
+// add_action( 'admin_head-term.php', 'wpse_hide_cat_descr' );
+// add_action( 'admin_head-edit-tags.php', 'wpse_hide_cat_descr' );
+
 
 add_action('wp', 'myfun');
  function myfun(){ 
@@ -194,9 +207,7 @@ add_action('wp', 'myfun');
 			$terms = get_terms( 'brand' );
 			$term = array_pop($terms);
 			$termlink = get_category_link( $term->term_id);
-			// $termlink = "https://stackoverflow.com/questions/42476391/get-terms-in-functions-php";
 		wp_redirect($termlink); exit;
-	//  $test = "alsdkfjalsdkfjasdf";
 		endif;
 	 }
   }

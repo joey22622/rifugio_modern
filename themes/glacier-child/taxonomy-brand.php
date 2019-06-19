@@ -45,8 +45,8 @@
 	$variants = "three";
 	$project_title = get_field('project_details');
 	$project_location = get_field('project_location');
+	$description = get_field('brand_description');
 	$term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-
 	?>
 
     <div class="container <?php echo $column["page"]?>">
@@ -91,7 +91,7 @@
 
 						
 					<div class="<?php echo $column['details'] ?> project-details">
-<?php echo term_description(); ?> 
+<?php echo $description; ?> 
 						<div class="row">
 							<div class="col-12-md project-link">
 								<a href="<?php echo $website ?>" class="brand-website" target="_blank">
