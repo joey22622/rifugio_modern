@@ -939,7 +939,7 @@ a {
 	-ms-flex-pack: justify;
 	    justify-content: space-between;
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 }
 
 .header-wrap .logo-gradient {
@@ -984,7 +984,7 @@ a {
 
 .hasHover .main-navigation .menu-wrap {
 	transform: translateX(100px);
-	height: 5rem;
+	min-height: 5rem;
 	top: 0;
 }
 
@@ -1012,9 +1012,9 @@ a {
 }
 
 .hasHover .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul li {
-	padding: 1rem;
+	padding: .25rem;
 	margin: 0;
-	background: rgba(10, 15, 18, 0.8);
+	background: rgba(10, 15, 18, 0.7);
 }
 
 .hasHover .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul li a {
@@ -1100,7 +1100,6 @@ a {
 
 .main-navigation .menu-wrap .menu-main-navigation-container > ul li {
 	margin: 1rem 0rem;
-	opacity: .8;
 	transition: .4s;
 	text-shadow: 1px 1px 2px black;
 	position: relative;
@@ -1303,6 +1302,7 @@ body {
 	    justify-content: center;
 	-ms-flex-align: center;
 	    align-items: center;
+	pointer-events: none;
 }
 
 .home-logo-wrap .logo-wrap {

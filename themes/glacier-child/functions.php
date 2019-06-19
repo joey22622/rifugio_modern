@@ -202,12 +202,13 @@ function wpse_hide_cat_descr() { ?>
 add_action('wp', 'myfun');
  function myfun(){ 
 	 global $termlink;
+	 global $terms;
 	 if('brand-item' == get_post_type()){ 
 		if(is_single()):
 			$terms = get_terms( 'brand' );
 			$term = array_pop($terms);
 			$termlink = get_category_link( $term->term_id);
-		wp_redirect($termlink); exit;
+		// wp_redirect($termlink); exit;
 		endif;
 	 }
   }

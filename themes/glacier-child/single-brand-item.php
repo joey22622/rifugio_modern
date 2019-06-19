@@ -3,7 +3,7 @@
 /* ::::: Single Post ::::: */
 /* ======================= */
 $terms = get_terms( 'brand' );
-$term = array_pop($terms);
+// $term = array_pop($terms);
 $termlink = get_category_link( $term->term_id);
 $termlink = "https://www.google.com";
 function redirect_custom_page() {
@@ -36,7 +36,7 @@ get_header();
   <div class="row">
   
 	<div class="col-md-9">
-	<h1>Hi there!!<?php echo $brand_item_id . $url . $parent_brand; ?></h1>
+	<h1>Hi there!!<?php echo $termlink; ?></h1>
 
 		<?php if ( have_posts() ):
 								
@@ -51,10 +51,13 @@ get_header();
 			?>
 <span class="parent-brand-link"><?php echo $url?></span>
 <?php 
-									echo '<ul>';
-										echo '<li><a href="'. get_category_link( $term->term_id ) .'">' . $termlink . 'ss</a></li>';
-
-									echo '</ul>';
+			if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+				echo '<ul>';
+				foreach ( $terms as $term ) {
+					echo '<li><a href="'. get_category_link( $term->term_id ) .'">' . $term->name . '</a></li>';
+				}
+				echo '</ul>';
+			}
 								
 								?>
 <?php
