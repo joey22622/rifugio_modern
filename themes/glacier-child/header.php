@@ -47,6 +47,7 @@ endif;
 
 
 <header <?php if ( true == get_theme_mod( 'header_sticky', false ) ) : ?> class="sticky" <?php endif; ?> >
+  <div class="header-gradient"></div><!-- /.header-gradient -->
   <div class="container-fluid">
     <div class="row">
       <div class="header-wrap">

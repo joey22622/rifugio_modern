@@ -118,7 +118,17 @@ a{
 }
 
 //HEADER STYLES
-
+.header-gradient{
+	width: 100vw;
+	height: 20vh;
+	pointer-events: none;
+	position: fixed;
+	background: -moz-linear-gradient(top, rgba(30,35,38,1) 0%,   rgba(30,35,38,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(30,35,38,1) 0%,  rgba(30,35,38,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(30,35,38,1) 0%,  rgba(30,35,38,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 ); /* IE6-9 */
+	z-index: 2;
+}
 .header-wrap{
 	width: 100%;
 	display: flex;
@@ -157,7 +167,12 @@ a{
 			text-transform: lowercase;
 			font-size: 3rem;
 			line-height: .7em;
-			padding: 0 1rem;
+			padding: 0 1.4rem;
+		}
+		.brand-head-wrap{
+			border-left: solid $color__link-hover 1px;
+			margin-left: 1.4rem;
+
 		}
 	}
 
@@ -319,7 +334,7 @@ a{
 						li {
 							box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 							a{
-								padding: .8rem 4rem;
+								padding: .8rem 2.6rem;
 							}
 						}
 	
@@ -350,7 +365,7 @@ a{
 			ul li{
 				
 				a{
-					padding: 1rem 4rem;
+					padding: 1rem 2.6rem;
 				}
 				
 			}
@@ -700,7 +715,7 @@ body{
 			width: 100%;
 			@media only screen and(min-width: $screen__tablet-width){
 				width: 950px; 
-				justify-content: space-between;
+				// justify-content: space-between;
 			}
 		}
 

@@ -932,6 +932,20 @@ a {
 	outline: none;
 }
 
+.header-gradient {
+	width: 100vw;
+	height: 20vh;
+	pointer-events: none;
+	position: fixed;
+	/* FF3.6-15 */
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #1e2326 0%, rgba(30, 35, 38, 0) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 );
+	/* IE6-9 */
+	z-index: 2;
+}
+
 .header-wrap {
 	width: 100%;
 	display: -ms-flexbox;
@@ -971,7 +985,12 @@ a {
 	text-transform: lowercase;
 	font-size: 3rem;
 	line-height: .7em;
-	padding: 0 1rem;
+	padding: 0 1.4rem;
+}
+
+.header-wrap .logo-gradient .brand-head-wrap {
+	border-left: solid #f8981d 1px;
+	margin-left: 1.4rem;
 }
 
 .header-wrap .logo-wrap {
@@ -1140,7 +1159,7 @@ a {
 }
 
 .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul li a {
-	padding: .8rem 4rem;
+	padding: .8rem 2.6rem;
 }
 
 .main-navigation .menu-wrap .menu-main-navigation-container > ul > li.active > a {
@@ -1166,7 +1185,7 @@ a {
 }
 
 .main-navigation.active .menu-wrap ul li a {
-	padding: 1rem 4rem;
+	padding: 1rem 2.6rem;
 }
 
 .hamburger {
@@ -1536,8 +1555,6 @@ body {
 	.tax-brand .post-title-row .title-inner-wrap,
 	.single-portfolio .post-title-row .title-inner-wrap {
 		width: 950px;
-		-ms-flex-pack: justify;
-		    justify-content: space-between;
 	}
 }
 

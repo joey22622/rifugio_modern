@@ -48,8 +48,16 @@
 	$project_location = get_field('project_location', $acfterm);
 	$description = get_field('brand_description', $acfterm);
 	$term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+	$feat_img = get_field('featured_image', $acfterm);
+	$img_url = $feat_img['url'];
+	$img_title = $feat_img['title'];
+	$img_alt = $feat_img['alt'];
+	$img_caption = $feat_img['caption'];
 	?>
-
+	<div class="container-fluid featured-img-wrap">
+		<img src="<?php echo $img_url ?>"/>
+	</div>
+	<!-- /.container-fluid featured-img-wrap -->
     <div class="container <?php echo $column["page"]?>">
     	<div class="row">
 			<div class="col-md-12">
