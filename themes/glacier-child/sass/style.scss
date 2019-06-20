@@ -127,6 +127,7 @@ a{
 	z-index: 2;
 	
 	.logo-gradient{
+		display: flex;
 		min-width: 350px;
 		height: 5rem;
 		padding: 1.2rem 3rem;
@@ -148,6 +149,15 @@ a{
 					fill: $color__link-hover;
 				}
 			}
+		}
+		a{
+			// display: block;
+		}
+		h1{
+			text-transform: lowercase;
+			font-size: 3rem;
+			line-height: .7em;
+			padding: 0 1rem;
 		}
 	}
 
@@ -187,6 +197,9 @@ a{
 					// margin-top: 3rem;
 					background:none;
 					padding-top: 3rem;
+					position: absolute;
+					min-width: 15em;
+					right: 0;
 					li{
 						padding: .25rem;
 						margin: 0;

@@ -60,7 +60,6 @@ endif;
         </div>
       </a>
       <!-- logo-wrap -->
-
        <?php
       else:
       ?>
@@ -95,29 +94,21 @@ endif;
       endif;
        
       ?>
+       <?php
+            if(is_tax('brand')):
+              $term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+              ?>
+      <div class="brand-head-wrap">
+            <h1 class="brand-head">
+                <?php echo $term->name; ?>
+            </h1>
+            <!-- /.brand-head -->
+      </div>
+      <!-- /.brand-head-wrap -->
+              <?php
+            endif;
+              ?>
       </div><!-- /.logo-gradient -->
-
-
-           <?php if ( class_exists( 'WooCommerce' ) ) : ?>
-
-             <?php if ( true == get_theme_mod( 'cart_shop', true ) ) : ?>
-
-              <!-- WOOCOMMERCE CART -->
-              <div class="cart-container">
-                <div class="icon-cart">
-                  <i class="icon-ecommerce-bag"></i>
-                  <span class="cart-count"><?php echo sprintf (_n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'glacier' ), WC()->cart->get_cart_contents_count() ); ?></span> 
-                </div>
-                <div class="cart-widget">
-                    <?php woocommerce_mini_cart(); ?>
-                </div>
-              </div>
-              <!-- END WOOCOMMERCE CART -->
-
-             <?php endif; ?>
-
-            <?php endif; ?>
-
 
             <!-- NAVIGATION -->
             <nav class="main-navigation">

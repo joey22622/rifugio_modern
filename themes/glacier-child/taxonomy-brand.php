@@ -44,7 +44,6 @@
 	$logo = get_field('brand_logo', $acfterm);
 	$website = get_field('brand_link', $acfterm);
 	$visible = get_field('visible_details', $acfterm);
-	$variants = "three";
 	$project_title = get_field('project_details', $acfterm);
 	$project_location = get_field('project_location', $acfterm);
 	$description = get_field('brand_description', $acfterm);
@@ -57,7 +56,6 @@
 				<div class="container">
 				<div  class="row post-title-row">
 					<div class="col-md-12 title-inner-wrap">
-						<h1><?php echo $term->name;?></h1>
 	
 	<?php if($logo): ?>
 

@@ -943,6 +943,8 @@ a {
 }
 
 .header-wrap .logo-gradient {
+	display: -ms-flexbox;
+	display: flex;
 	min-width: 350px;
 	height: 5rem;
 	padding: 1.2rem 3rem;
@@ -963,6 +965,13 @@ a {
 
 .header-wrap .logo-gradient a:hover svg * {
 	fill: #f8981d;
+}
+
+.header-wrap .logo-gradient h1 {
+	text-transform: lowercase;
+	font-size: 3rem;
+	line-height: .7em;
+	padding: 0 1rem;
 }
 
 .header-wrap .logo-wrap {
@@ -1009,6 +1018,9 @@ a {
 .hasHover .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul {
 	background: none;
 	padding-top: 3rem;
+	position: absolute;
+	min-width: 15em;
+	right: 0;
 }
 
 .hasHover .main-navigation .menu-wrap .menu-main-navigation-container > ul li ul li {
