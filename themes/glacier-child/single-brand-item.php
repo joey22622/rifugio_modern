@@ -2,10 +2,10 @@
 /* ======================= */
 /* ::::: Single Post ::::: */
 /* ======================= */
-$terms = get_terms( 'brand' );
+// $terms = get_terms( 'brand' );
 // $term = array_pop($terms);
-$termlink = get_category_link( $term->term_id);
-$termlink = "https://www.google.com";
+// $termlink = get_category_link( $term->term_id);
+// $termlink = "https://www.google.com";
 function redirect_custom_page() {
 	if (is_single()) {
 		wp_redirect($termlink); exit;
@@ -36,7 +36,7 @@ get_header();
   <div class="row">
   
 	<div class="col-md-9">
-	<h1>Hi there!!<?php echo $termlink; ?></h1>
+	<h1>Hi there!!<?php echo $postID; ?></h1>
 
 		<?php if ( have_posts() ):
 								
