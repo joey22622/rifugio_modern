@@ -12,8 +12,10 @@
 <?php if ( class_exists('acf') ) : ?>
 
 	<?php
+		$acfterm = get_queried_object();
+
 	// vars ( ACF )
-	$images = get_field('gallery_projects');
+	$images = get_field('gallery_projects', $acfterm);
 	$multiImg = true;
 	$column = array(
 		"page"				=> "multi-photo",
@@ -39,13 +41,13 @@
 	endif;
 
 
-	$logo = get_field('brand_logo');
-	$website = get_field('brand_link');
-	$visible = get_field('visible_details');
+	$logo = get_field('brand_logo', $acfterm);
+	$website = get_field('brand_link', $acfterm);
+	$visible = get_field('visible_details', $acfterm);
 	$variants = "three";
-	$project_title = get_field('project_details');
-	$project_location = get_field('project_location');
-	$description = get_field('brand_description');
+	$project_title = get_field('project_details', $acfterm);
+	$project_location = get_field('project_location', $acfterm);
+	$description = get_field('brand_description', $acfterm);
 	$term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 	?>
 
