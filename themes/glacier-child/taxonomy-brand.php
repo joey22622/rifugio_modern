@@ -55,14 +55,14 @@
 	$img_caption = $feat_img['caption'];
 	?>
 	<div class="container-fluid featured-img-wrap">
-		<img src="<?php echo $img_url ?>"/>
+		<a href="<?php echo esc_url($img_url) ?>" title="<?php echo esc_html($img_title); ?>" class="showcase" data-rel="lightcase:gallery">
+			<img src="<?php echo $img_url ?>"/>
+		</a>
 	</div>
 	<!-- /.container-fluid featured-img-wrap -->
-    <div class="container <?php echo $column["page"]?>">
-    	<div class="row">
-			<div class="col-md-12">
-				<div class="container">
-				<div  class="row post-title-row">
+
+	<div class="container logo-container">
+	<div  class="row post-title-row">
 					<div class="col-md-12 title-inner-wrap">
 	
 	<?php if($logo): ?>
@@ -72,10 +72,14 @@
 	<?php endif; ?>
 					</div>
 					<!-- /.col-md-12.title-inner-wrap -->
-
 				</div>
 				<!-- /.row.post-title-row -->
-
+	</div>
+	<!-- /.container -->
+    <div class="container-fluid <?php echo $column["page"]?>">
+    	<div class="row">
+			<div class="col-md-12 content-background">
+				<div class="container">
 				<div class="row content-wrap">
 	<?php if ( $images ) : ?> 
 				<div class="<?php echo $column["gallery"] ?>">
