@@ -1562,7 +1562,7 @@ body {
 	-ms-flex-align: center;
 	    align-items: center;
 	transition: .3s;
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.4);
 }
 
 .tax-brand .featured-img-wrap a .logo-container .logo-wrap,
@@ -1585,7 +1585,7 @@ body {
 
 .tax-brand .featured-img-wrap a .logo-container .logo-wrap svg *,
 .single-portfolio .featured-img-wrap a .logo-container .logo-wrap svg * {
-	fill: rgba(30, 35, 38, 0.6);
+	fill: rgba(255, 255, 255, 0.2);
 }
 
 .tax-brand .featured-img-wrap img,

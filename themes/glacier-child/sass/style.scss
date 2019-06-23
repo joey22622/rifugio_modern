@@ -722,7 +722,7 @@ body{
 				justify-content: center;
 				align-items: center;
 				transition: .3s;
-				background: rgba(0,0,0,.1);
+				background: rgba(0,0,0,.4);
 				.logo-wrap{
 					display: block;
 					height: 8rem;
@@ -733,8 +733,10 @@ body{
 					svg{
 						height: 100%;
 						*{
-							// fill: rgba(255,255,255,.1);
-							fill: rgba(30,35,38,.6);
+							fill: rgba(255,255,255,.2);
+							// fill: rgba(30,35,38,.6);
+							// stroke: white;
+							// stroke-width: 
 						}
 					}
 				}
