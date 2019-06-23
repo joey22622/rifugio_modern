@@ -688,17 +688,88 @@ body{
 	}
 	.featured-img-wrap{
 		padding: 0;
+		position: relative;
 		margin: 0;
+		// background: rgba(0,0,0,.6);
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		height: 60vh;
+		width: 100%;
 		position: fixed;
+		.featured-top-pad{
+			height: 5rem;
+			background: rgba(30,35,38,1);
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+		}
+		.featured-inner{
+			display: flex;
+			padding: 0 5px;
+		}
+		// margin-top: 5rem;
+		a{
+			display: block;
+			position: relative;
+			// padding: 0 5px;
+			.logo-container{
+				position: absolute;
+				top:0;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: .3s;
+				background: rgba(0,0,0,.1);
+				.logo-wrap{
+					display: block;
+					height: 8rem;
+		
+					@media only screen and(min-width: $screen__tablet-width){
+						display: block;
+					}
+					svg{
+						height: 100%;
+						*{
+							// fill: rgba(255,255,255,.1);
+							fill: rgba(30,35,38,.6);
+						}
+					}
+				}
+			}
+		}
 		img{	
-			width: 100vw;
-			height: 100vh;
+			// width: 100vw;
+			// height: 100vh;
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
+			border-left: solid 1px rgba(255,255,255,0);
+			border-right: solid 1px rgba(255,255,255,0);
+			transition: .3s;
+		}
+		a:hover{
+			.logo-container{
+				pointer-events: none;
+				opacity: 0;
+
+				svg *{
+					// fill: white;
+					// transition: 1s;
+				}
+			}
+			img{
+				border-left: solid 1px white;
+				border-right: solid 1px white;
+				box-shadow: 0 0 100px rgba(255,255,255,.7);
+			}
 		}
 	}
-	.logo-container{
-		position: fixed;
-	}
+	
+
+	
 	h1{
 		letter-spacing: .1em;
 		line-height: 1em;
@@ -708,10 +779,11 @@ body{
 	}
 	.content-background{
 		background: rgba(30,35,38,1);
-		margin-top: 100vh;
+		margin-top: 60vh;
 	}
 	.content-wrap{
 		max-width: 950px;
+		padding-top: 5px;
 		background-color: rgba(30,35,38,1) !important;
 	}
 	.post-title-row{
@@ -724,34 +796,6 @@ body{
 		margin-bottom: 50px;
 		padding: 1.2rem;
 		padding-bottom: 2rem;
-
-		.title-inner-wrap{
-			display: flex;
-			justify-content: center;
-			align-items: flex-end;
-			padding: 0 5rem;
-			width: 100%;
-			@media only screen and(min-width: $screen__tablet-width){
-				width: 950px; 
-				// justify-content: space-between;
-			}
-		}
-
-		.logo-wrap{
-			display: none;
-			height: 8rem;
-
-			@media only screen and(min-width: $screen__tablet-width){
-				display: block;
-			}
-			svg{
-				height: 100%;
-				*{
-					fill: rgba(255,255,255,.1);
-					fill: rgba(30,35,38,.6);
-				}
-			}
-		}
 	}
 	.overlay-box{
 		height: 5rem;
@@ -765,13 +809,16 @@ body{
 		}
 	}
 	.project-details{
-		padding: 4rem 0;
 		text-align: justify;
-
-		@media only screen and(min-width: $screen__tablet-width) {
-			&>p{
-				padding: 0 4rem;
-				text-align: left;
+		padding: 5px;
+		.details-inner-wrap{
+			background: rgba(0,0,0,.3);
+			padding: 4rem;
+			@media only screen and(min-width: $screen__tablet-width) {
+				&>p{
+					padding: 0 8rem;
+					text-align: justify;
+				}
 			}
 		}
 
@@ -785,29 +832,24 @@ body{
 		a{
 			letter-spacing: .1rem;
 			display: flex;
+			justify-content: center;
 			align-items: center;
 			width: 100%;
 			transition: .2s;
 
-			@media only screen and(min-width: $screen__tablet-width){
-				width: 30em;
-			}
+			// @media only screen and(min-width: $screen__tablet-width){
+			// 	width: 30em;
+			// }
 			span{
 				font-size: 2.2rem;
 				margin: 0 2rem;
 			}
 		}
-		.line-left{
-			flex-grow: 1;
-			@media only screen and(min-width: $screen__tablet-width){
-				width: 3rem;
-				flex-grow: unset;
-			}
-		}
+		.line-left,
 		.line-right{
 			flex-grow: 1;
 			@media only screen and(min-width: $screen__tablet-width){
-				width: 8rem;
+				width: 4rem;
 				flex-grow: unset;
 			}
 		}
@@ -818,8 +860,9 @@ body{
 			transition: .2s;
 		}
 		&:hover{
-			.line-right{
-				flex-grow: 1;
+			.line-right,
+			.line-left{
+				width: 10rem;
 			}
 		}
 	}
@@ -861,10 +904,6 @@ body{
 	}
 	.project-points{
 		border-top: solid 1px rgba(255,255,255,.1);
-		// background: -moz-linear-gradient(bottom, rgba(0,0,0,.1) 0%,  rgba(0,0,0,0) 100%); /* FF3.6-15 */
-		// background: -webkit-linear-gradient(bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-		// background: linear-gradient(to bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2326', endColorstr='#001e2326',GradientType=1 ); /* IE6-9 */
 		padding-top: 3rem;
 		margin-top: 3rem;
 

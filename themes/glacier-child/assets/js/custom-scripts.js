@@ -103,9 +103,19 @@ html.addEventListener("mouseenter", function(){
     }      
 });
 
-
-
-function toggleSubMenu(){
+function matchWidth(jqElem,jqTarget){
+    console.log(jqElem);
+    if($(jqElem).length){
+        $(jqElem).css("width", "");
+        var width = $(jqTarget).width();
+        $(jqElem).css("width", width);
+    }
+}
+matchWidth(".featured-img-wrap .featured-inner", ".content-wrap");
+html.addEventListener("resize", function(){
+    matchWidth("");
+});
+    function toggleSubMenu(){
     //checks if screen hasHover.. if so:
         //checks if subMenu has class
 console.log("toggleSubMenu");
@@ -161,6 +171,7 @@ function homeLogoFade(fadePoint){
     }
     console.log(pageLocation)
 }
+
 
 //reveals/hides header logo at certain point
 //targetPoint is the scrollTop value where the function toggles

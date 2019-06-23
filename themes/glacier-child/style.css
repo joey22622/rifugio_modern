@@ -1514,21 +1514,102 @@ body {
 .tax-brand .featured-img-wrap,
 .single-portfolio .featured-img-wrap {
 	padding: 0;
+	position: relative;
 	margin: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: stretch;
+	    align-items: stretch;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	height: 60vh;
+	width: 100%;
 	position: fixed;
+}
+
+.tax-brand .featured-img-wrap .featured-top-pad,
+.single-portfolio .featured-img-wrap .featured-top-pad {
+	height: 5rem;
+	background: #1e2326;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+}
+
+.tax-brand .featured-img-wrap .featured-inner,
+.single-portfolio .featured-img-wrap .featured-inner {
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0 5px;
+}
+
+.tax-brand .featured-img-wrap a,
+.single-portfolio .featured-img-wrap a {
+	display: block;
+	position: relative;
+}
+
+.tax-brand .featured-img-wrap a .logo-container,
+.single-portfolio .featured-img-wrap a .logo-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
+	transition: .3s;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.tax-brand .featured-img-wrap a .logo-container .logo-wrap,
+.single-portfolio .featured-img-wrap a .logo-container .logo-wrap {
+	display: block;
+	height: 8rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.tax-brand .featured-img-wrap a .logo-container .logo-wrap,
+	.single-portfolio .featured-img-wrap a .logo-container .logo-wrap {
+		display: block;
+	}
+}
+
+.tax-brand .featured-img-wrap a .logo-container .logo-wrap svg,
+.single-portfolio .featured-img-wrap a .logo-container .logo-wrap svg {
+	height: 100%;
+}
+
+.tax-brand .featured-img-wrap a .logo-container .logo-wrap svg *,
+.single-portfolio .featured-img-wrap a .logo-container .logo-wrap svg * {
+	fill: rgba(30, 35, 38, 0.6);
 }
 
 .tax-brand .featured-img-wrap img,
 .single-portfolio .featured-img-wrap img {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	-o-object-fit: cover;
 	   object-fit: cover;
+	border-left: solid 1px rgba(255, 255, 255, 0);
+	border-right: solid 1px rgba(255, 255, 255, 0);
+	transition: .3s;
 }
 
-.tax-brand .logo-container,
-.single-portfolio .logo-container {
-	position: fixed;
+.tax-brand .featured-img-wrap a:hover .logo-container,
+.single-portfolio .featured-img-wrap a:hover .logo-container {
+	pointer-events: none;
+	opacity: 0;
+}
+
+.tax-brand .featured-img-wrap a:hover img,
+.single-portfolio .featured-img-wrap a:hover img {
+	border-left: solid 1px white;
+	border-right: solid 1px white;
+	box-shadow: 0 0 100px rgba(255, 255, 255, 0.7);
 }
 
 .tax-brand h1,
@@ -1542,12 +1623,13 @@ body {
 .tax-brand .content-background,
 .single-portfolio .content-background {
 	background: #1e2326;
-	margin-top: 100vh;
+	margin-top: 60vh;
 }
 
 .tax-brand .content-wrap,
 .single-portfolio .content-wrap {
 	max-width: 950px;
+	padding-top: 5px;
 	background-color: #1e2326 !important;
 }
 
@@ -1563,49 +1645,6 @@ body {
 	margin-bottom: 50px;
 	padding: 1.2rem;
 	padding-bottom: 2rem;
-}
-
-.tax-brand .post-title-row .title-inner-wrap,
-.single-portfolio .post-title-row .title-inner-wrap {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: center;
-	    justify-content: center;
-	-ms-flex-align: end;
-	    align-items: flex-end;
-	padding: 0 5rem;
-	width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-	.tax-brand .post-title-row .title-inner-wrap,
-	.single-portfolio .post-title-row .title-inner-wrap {
-		width: 950px;
-	}
-}
-
-.tax-brand .post-title-row .logo-wrap,
-.single-portfolio .post-title-row .logo-wrap {
-	display: none;
-	height: 8rem;
-}
-
-@media only screen and (min-width: 768px) {
-	.tax-brand .post-title-row .logo-wrap,
-	.single-portfolio .post-title-row .logo-wrap {
-		display: block;
-	}
-}
-
-.tax-brand .post-title-row .logo-wrap svg,
-.single-portfolio .post-title-row .logo-wrap svg {
-	height: 100%;
-}
-
-.tax-brand .post-title-row .logo-wrap svg *,
-.single-portfolio .post-title-row .logo-wrap svg * {
-	fill: rgba(255, 255, 255, 0.1);
-	fill: rgba(30, 35, 38, 0.6);
 }
 
 .tax-brand .overlay-box,
@@ -1628,15 +1667,21 @@ body {
 
 .tax-brand .project-details,
 .single-portfolio .project-details {
-	padding: 4rem 0;
 	text-align: justify;
+	padding: 5px;
+}
+
+.tax-brand .project-details .details-inner-wrap,
+.single-portfolio .project-details .details-inner-wrap {
+	background: rgba(0, 0, 0, 0.3);
+	padding: 4rem;
 }
 
 @media only screen and (min-width: 768px) {
-	.tax-brand .project-details > p,
-	.single-portfolio .project-details > p {
-		padding: 0 4rem;
-		text-align: left;
+	.tax-brand .project-details .details-inner-wrap > p,
+	.single-portfolio .project-details .details-inner-wrap > p {
+		padding: 0 8rem;
+		text-align: justify;
 	}
 }
 
@@ -1657,17 +1702,12 @@ body {
 	letter-spacing: .1rem;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
 	-ms-flex-align: center;
 	    align-items: center;
 	width: 100%;
 	transition: .2s;
-}
-
-@media only screen and (min-width: 768px) {
-	.tax-brand .project-link a,
-	.single-portfolio .project-link a {
-		width: 30em;
-	}
 }
 
 .tax-brand .project-link a span,
@@ -1677,30 +1717,19 @@ body {
 }
 
 .tax-brand .project-link .line-left,
-.single-portfolio .project-link .line-left {
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
-}
-
-@media only screen and (min-width: 768px) {
-	.tax-brand .project-link .line-left,
-	.single-portfolio .project-link .line-left {
-		width: 3rem;
-		-ms-flex-positive: unset;
-		    flex-grow: unset;
-	}
-}
-
 .tax-brand .project-link .line-right,
+.single-portfolio .project-link .line-left,
 .single-portfolio .project-link .line-right {
 	-ms-flex-positive: 1;
 	    flex-grow: 1;
 }
 
 @media only screen and (min-width: 768px) {
+	.tax-brand .project-link .line-left,
 	.tax-brand .project-link .line-right,
+	.single-portfolio .project-link .line-left,
 	.single-portfolio .project-link .line-right {
-		width: 8rem;
+		width: 4rem;
 		-ms-flex-positive: unset;
 		    flex-grow: unset;
 	}
@@ -1714,9 +1743,10 @@ body {
 }
 
 .tax-brand .project-link:hover .line-right,
-.single-portfolio .project-link:hover .line-right {
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
+.tax-brand .project-link:hover .line-left,
+.single-portfolio .project-link:hover .line-right,
+.single-portfolio .project-link:hover .line-left {
+	width: 10rem;
 }
 
 .hasHover .gallery-projects {

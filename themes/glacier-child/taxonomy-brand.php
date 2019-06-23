@@ -54,28 +54,25 @@
 	$img_alt = $feat_img['alt'];
 	$img_caption = $feat_img['caption'];
 	?>
-	<div class="container-fluid featured-img-wrap">
-		<a href="<?php echo esc_url($img_url) ?>" title="<?php echo esc_html($img_title); ?>" class="showcase" data-rel="lightcase:gallery">
-			<img src="<?php echo $img_url ?>"/>
-		</a>
+	<div class="featured-img-wrap">
+		<div class="featured-top-pad"></div>
+			<div class="featured-inner">
+			<!-- /.featured-top-padding -->
+			<a href="<?php echo esc_url($img_url) ?>" title="<?php echo esc_html($img_title); ?>" class="showcase" data-rel="lightcase:gallery">
+				<img src="<?php echo $img_url ?>"/>
+				<div class="logo-container">
+				<?php if($logo): ?>
+				<div class="logo-wrap"><?php echo $logo; ?></div><!-- /.logo-wrap -->
+				<?php endif; ?>
+			</div>
+
+			</a>
+		<!-- /.logo-container -->
+		</div>
+		<!-- /.featured-inner -->
+
 	</div>
 	<!-- /.container-fluid featured-img-wrap -->
-
-	<div class="container logo-container">
-	<div  class="row post-title-row">
-					<div class="col-md-12 title-inner-wrap">
-	
-	<?php if($logo): ?>
-
-						<div class="logo-wrap"><?php echo $logo; ?></div><!-- /.logo-wrap -->
-
-	<?php endif; ?>
-					</div>
-					<!-- /.col-md-12.title-inner-wrap -->
-				</div>
-				<!-- /.row.post-title-row -->
-	</div>
-	<!-- /.container -->
     <div class="container-fluid <?php echo $column["page"]?>">
     	<div class="row">
 			<div class="col-md-12 content-background">
@@ -103,20 +100,24 @@
 
 						
 					<div class="<?php echo $column['details'] ?> project-details">
-<?php echo $description; ?> 
-						<div class="row">
-							<div class="col-12-md project-link">
-								<a href="<?php echo $website ?>" class="brand-website" target="_blank">
-									<div class="line-left"></div>
-										<span>visit website</span>
-									<div class="line-right"></div>
-								</a> <!-- /.brand-website -->
+						<div class="details-inner-wrap">
+							<?php echo $description; ?> 
+							<div class="row">
+								<div class="col-12-md project-link">
+									<a href="<?php echo $website ?>" class="brand-website" target="_blank">
+											<div class="line-left"></div>
+											<span>visit website</span>
+											<div class="line-right"></div>
+										</a> <!-- /.brand-website -->
+										
+										
+									</div>
+									<!-- /.col-12-md.project-link -->
+								</div>
+								<!-- /.row -->	
 
-
-							</div>
-							<!-- /.col-12-md.project-link -->
 						</div>
-						<!-- /.row -->	
+						<!-- /.details-inner-wrap -->
 					</div>
 					<!-- /.project-details -->
 				</div>
